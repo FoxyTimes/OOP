@@ -1,0 +1,4954 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab1/test/BitArrayTest.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab1\cmake-build-debug-coverage\test\CMakeFiles\lab1_tst.dir\BitArrayTest.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab1\cmake-build-debug-coverage\test\CMakeFiles\lab1_tst.dir\BitArrayTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <gtest/gtest.h>
+        -:    2:#include "BitArray.h"
+        -:    3:#include <random>
+        -:    4:
+function main called 1 returned 100% blocks executed 100%
+        1:    5:int main(int argc, char **argv) {
+        1:    6:    ::testing::InitGoogleTest(&argc, argv);
+        1:    6-block  0
+call    0 returned 1
+        1:    7:    return RUN_ALL_TESTS();
+call    0 returned 1
+        -:    8:}
+        -:    9:
+        4:   10:TEST(bta, construct_copy) {
+        1:   11:    BitArray array1(1000, 2);
+        1:   12:    BitArray array2;
+        1:   13:    BitArray array3(array1);
+       1*:   14:    ASSERT_EQ(array1, array3);
+        1:   15:    array2.push_back(true);
+       1*:   16:    ASSERT_EQ(array2.to_string(), "1");
+        1:   17:}
+------------------
+_ZN23bta_construct_copy_TestC1Ev:
+function _ZN23bta_construct_copy_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   10:TEST(bta, construct_copy) {
+        1:   10-block  0
+call    0 returned 1
+------------------
+_ZN23bta_construct_copy_TestD0Ev:
+function _ZN23bta_construct_copy_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   10:TEST(bta, construct_copy) {
+        1:   10-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23bta_construct_copy_TestD1Ev:
+function _ZN23bta_construct_copy_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   10:TEST(bta, construct_copy) {
+        1:   10-block  0
+call    0 returned 1
+------------------
+_ZN23bta_construct_copy_Test8TestBodyEv:
+function _ZN23bta_construct_copy_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:   10:TEST(bta, construct_copy) {
+        1:   11:    BitArray array1(1000, 2);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:    BitArray array2;
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    BitArray array3(array1);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   14:    ASSERT_EQ(array1, array3);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   14-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   14-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   14-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   14-block  5
+call   16 never executed
+call   17 never executed
+        1:   14-block  6
+        1:   14-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   14-block  8
+    $$$$$:   14-block  9
+call   21 never executed
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+call   22 never executed
+    $$$$$:   14-block 12
+    $$$$$:   14-block 13
+call   23 never executed
+        1:   15:    array2.push_back(true);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   16:    ASSERT_EQ(array2.to_string(), "1");
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   16-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   16-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   16-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   16-block  6
+call   20 never executed
+call   21 never executed
+        1:   16-block  7
+        1:   16-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   16-block  9
+    $$$$$:   16-block 10
+call   25 never executed
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+call   26 never executed
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+call   27 never executed
+    $$$$$:   16-block 15
+    $$$$$:   16-block 16
+call   28 never executed
+        1:   17:}
+        1:   17-block  0
+        1:   17-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   17-block  2
+        1:   17-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   17-block  4
+        1:   17-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:   17-block  6
+call    9 never executed
+    $$$$$:   17-block  7
+call   10 never executed
+    $$$$$:   17-block  8
+call   11 never executed
+------------------
+        -:   18:
+        4:   19:TEST(bta, size) {
+        1:   20:    BitArray array(1, 0);
+       1*:   21:    ASSERT_EQ(array.size_array(), 1);
+        1:   22:    array = BitArray(100, 0);
+       1*:   23:    ASSERT_EQ(array.size_array(), 100);
+        1:   24:    array = BitArray(1000, 0);
+       1*:   25:    ASSERT_EQ(array.size_array(), 1000);
+        1:   26:}
+------------------
+_ZN13bta_size_TestC1Ev:
+function _ZN13bta_size_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   19:TEST(bta, size) {
+        1:   19-block  0
+call    0 returned 1
+------------------
+_ZN13bta_size_TestD0Ev:
+function _ZN13bta_size_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   19:TEST(bta, size) {
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN13bta_size_TestD1Ev:
+function _ZN13bta_size_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   19:TEST(bta, size) {
+        1:   19-block  0
+call    0 returned 1
+------------------
+_ZN13bta_size_Test8TestBodyEv:
+function _ZN13bta_size_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:   19:TEST(bta, size) {
+        1:   20:    BitArray array(1, 0);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   21:    ASSERT_EQ(array.size_array(), 1);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   21-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   21-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   21-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   21-block  6
+call   19 never executed
+call   20 never executed
+        1:   21-block  7
+        1:   21-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   21-block  9
+    $$$$$:   21-block 10
+    $$$$$:   21-block 11
+    $$$$$:   21-block 12
+call   24 never executed
+    $$$$$:   21-block 13
+    $$$$$:   21-block 14
+call   25 never executed
+    $$$$$:   21-block 15
+    $$$$$:   21-block 16
+call   26 never executed
+        1:   22:    array = BitArray(100, 0);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block  2
+call    6 returned 1
+    $$$$$:   22-block  3
+call    7 never executed
+    $$$$$:   22-block  4
+       1*:   23:    ASSERT_EQ(array.size_array(), 100);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   23-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   23-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   23-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   23-block  5
+call   19 never executed
+call   20 never executed
+        1:   23-block  6
+        1:   23-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   23-block  8
+    $$$$$:   23-block  9
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+call   24 never executed
+    $$$$$:   23-block 12
+    $$$$$:   23-block 13
+call   25 never executed
+    $$$$$:   23-block 14
+    $$$$$:   23-block 15
+call   26 never executed
+        1:   24:    array = BitArray(1000, 0);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+    $$$$$:   24-block  3
+call    7 never executed
+    $$$$$:   24-block  4
+       1*:   25:    ASSERT_EQ(array.size_array(), 1000);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  1
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   25-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   25-block  3
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   25-block  4
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   25-block  5
+call   19 never executed
+call   20 never executed
+        1:   25-block  6
+        1:   25-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   25-block  8
+    $$$$$:   25-block  9
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+call   24 never executed
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+call   25 never executed
+    $$$$$:   25-block 14
+    $$$$$:   25-block 15
+call   26 never executed
+        1:   26:}
+        1:   26-block  0
+        1:   26-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   26-block  2
+call    3 never executed
+------------------
+        -:   27:
+        4:   28:TEST(bta, clear) {
+        1:   29:    BitArray array(10000, 7);
+        1:   30:    array.clear();
+       1*:   31:    ASSERT_EQ(array.count(), 0);
+        -:   32:
+        1:   33:    array.set();
+        1:   34:    array.clear();
+        -:   35:
+       1*:   36:    ASSERT_EQ(array.count(), 0);
+        1:   37:}
+------------------
+_ZN14bta_clear_TestC1Ev:
+function _ZN14bta_clear_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(bta, clear) {
+        1:   28-block  0
+call    0 returned 1
+------------------
+_ZN14bta_clear_TestD0Ev:
+function _ZN14bta_clear_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(bta, clear) {
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN14bta_clear_TestD1Ev:
+function _ZN14bta_clear_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(bta, clear) {
+        1:   28-block  0
+call    0 returned 1
+------------------
+_ZN14bta_clear_Test8TestBodyEv:
+function _ZN14bta_clear_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:   28:TEST(bta, clear) {
+        1:   29:    BitArray array(10000, 7);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30:    array.clear();
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   31:    ASSERT_EQ(array.count(), 0);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   31-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   31-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   31-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   31-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   31-block  6
+call   19 never executed
+call   20 never executed
+        1:   31-block  7
+        1:   31-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   31-block  9
+    $$$$$:   31-block 10
+    $$$$$:   31-block 11
+    $$$$$:   31-block 12
+call   24 never executed
+    $$$$$:   31-block 13
+    $$$$$:   31-block 14
+call   25 never executed
+    $$$$$:   31-block 15
+    $$$$$:   31-block 16
+call   26 never executed
+        -:   32:
+        1:   33:    array.set();
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:    array.clear();
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   35:
+       1*:   36:    ASSERT_EQ(array.count(), 0);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   36-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   36-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   36-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   36-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   36-block  6
+call   19 never executed
+call   20 never executed
+        1:   36-block  7
+        1:   36-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   36-block  9
+    $$$$$:   36-block 10
+    $$$$$:   36-block 11
+    $$$$$:   36-block 12
+call   24 never executed
+    $$$$$:   36-block 13
+    $$$$$:   36-block 14
+call   25 never executed
+    $$$$$:   36-block 15
+    $$$$$:   36-block 16
+call   26 never executed
+        1:   37:}
+        1:   37-block  0
+        1:   37-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   37-block  2
+call    3 never executed
+------------------
+        -:   38:
+        4:   39:TEST(bta, resize) {
+        1:   40:    BitArray array(10000, 7);
+        1:   41:    array.resize(32, false);
+       1*:   42:    ASSERT_EQ(array.to_string(), "00000000000000000000000000000111");
+       1*:   43:    ASSERT_EQ(array.size_array(), 32);
+        -:   44:
+        1:   45:    array.resize(34, true);
+       1*:   46:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000011111");
+       1*:   47:    ASSERT_EQ(array.size_array(), 34);
+        -:   48:
+        1:   49:    array.resize(33);
+       1*:   50:    ASSERT_EQ(array.to_string(), "000000000000000000000000000001111");
+       1*:   51:    ASSERT_EQ(array.size_array(), 33);
+        -:   52:
+        1:   53:    array.resize(34, false);
+       1*:   54:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000011110");
+       1*:   55:    ASSERT_EQ(array.size_array(), 34);
+        1:   56:}
+------------------
+_ZN15bta_resize_TestC1Ev:
+function _ZN15bta_resize_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   39:TEST(bta, resize) {
+        1:   39-block  0
+call    0 returned 1
+------------------
+_ZN15bta_resize_TestD0Ev:
+function _ZN15bta_resize_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   39:TEST(bta, resize) {
+        1:   39-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN15bta_resize_TestD1Ev:
+function _ZN15bta_resize_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   39:TEST(bta, resize) {
+        1:   39-block  0
+call    0 returned 1
+------------------
+_ZN15bta_resize_Test8TestBodyEv:
+function _ZN15bta_resize_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:   39:TEST(bta, resize) {
+        1:   40:    BitArray array(10000, 7);
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41:    array.resize(32, false);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   42:    ASSERT_EQ(array.to_string(), "00000000000000000000000000000111");
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   42-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   42-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   42-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   42-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   42-block  6
+call   20 never executed
+call   21 never executed
+        1:   42-block  7
+        1:   42-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   42-block  9
+    $$$$$:   42-block 10
+call   25 never executed
+    $$$$$:   42-block 11
+    $$$$$:   42-block 12
+call   26 never executed
+    $$$$$:   42-block 13
+    $$$$$:   42-block 14
+call   27 never executed
+    $$$$$:   42-block 15
+    $$$$$:   42-block 16
+call   28 never executed
+       1*:   43:    ASSERT_EQ(array.size_array(), 32);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   43-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   43-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   43-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   43-block  6
+call   19 never executed
+call   20 never executed
+        1:   43-block  7
+        1:   43-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   43-block  9
+    $$$$$:   43-block 10
+    $$$$$:   43-block 11
+    $$$$$:   43-block 12
+call   24 never executed
+    $$$$$:   43-block 13
+    $$$$$:   43-block 14
+call   25 never executed
+    $$$$$:   43-block 15
+    $$$$$:   43-block 16
+call   26 never executed
+        -:   44:
+        1:   45:    array.resize(34, true);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   46:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000011111");
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   46-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   46-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   46-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   46-block  6
+call   20 never executed
+call   21 never executed
+        1:   46-block  7
+        1:   46-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   46-block  9
+    $$$$$:   46-block 10
+call   25 never executed
+    $$$$$:   46-block 11
+    $$$$$:   46-block 12
+call   26 never executed
+    $$$$$:   46-block 13
+    $$$$$:   46-block 14
+call   27 never executed
+    $$$$$:   46-block 15
+    $$$$$:   46-block 16
+call   28 never executed
+       1*:   47:    ASSERT_EQ(array.size_array(), 34);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   47-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   47-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   47-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   47-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   47-block  6
+call   19 never executed
+call   20 never executed
+        1:   47-block  7
+        1:   47-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   47-block  9
+    $$$$$:   47-block 10
+    $$$$$:   47-block 11
+    $$$$$:   47-block 12
+call   24 never executed
+    $$$$$:   47-block 13
+    $$$$$:   47-block 14
+call   25 never executed
+    $$$$$:   47-block 15
+    $$$$$:   47-block 16
+call   26 never executed
+        -:   48:
+        1:   49:    array.resize(33);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   50:    ASSERT_EQ(array.to_string(), "000000000000000000000000000001111");
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   50-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   50-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   50-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   50-block  6
+call   20 never executed
+call   21 never executed
+        1:   50-block  7
+        1:   50-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   50-block  9
+    $$$$$:   50-block 10
+call   25 never executed
+    $$$$$:   50-block 11
+    $$$$$:   50-block 12
+call   26 never executed
+    $$$$$:   50-block 13
+    $$$$$:   50-block 14
+call   27 never executed
+    $$$$$:   50-block 15
+    $$$$$:   50-block 16
+call   28 never executed
+       1*:   51:    ASSERT_EQ(array.size_array(), 33);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   51-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   51-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   51-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   51-block  6
+call   19 never executed
+call   20 never executed
+        1:   51-block  7
+        1:   51-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   51-block  9
+    $$$$$:   51-block 10
+    $$$$$:   51-block 11
+    $$$$$:   51-block 12
+call   24 never executed
+    $$$$$:   51-block 13
+    $$$$$:   51-block 14
+call   25 never executed
+    $$$$$:   51-block 15
+    $$$$$:   51-block 16
+call   26 never executed
+        -:   52:
+        1:   53:    array.resize(34, false);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   54:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000011110");
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   54-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   54-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   54-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   54-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   54-block  6
+call   20 never executed
+call   21 never executed
+        1:   54-block  7
+        1:   54-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   54-block  9
+    $$$$$:   54-block 10
+call   25 never executed
+    $$$$$:   54-block 11
+    $$$$$:   54-block 12
+call   26 never executed
+    $$$$$:   54-block 13
+    $$$$$:   54-block 14
+call   27 never executed
+    $$$$$:   54-block 15
+    $$$$$:   54-block 16
+call   28 never executed
+       1*:   55:    ASSERT_EQ(array.size_array(), 34);
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   55-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   55-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   55-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   55-block  6
+call   19 never executed
+call   20 never executed
+        1:   55-block  7
+        1:   55-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:   55-block  9
+    $$$$$:   55-block 10
+    $$$$$:   55-block 11
+    $$$$$:   55-block 12
+call   24 never executed
+    $$$$$:   55-block 13
+    $$$$$:   55-block 14
+call   25 never executed
+    $$$$$:   55-block 15
+    $$$$$:   55-block 16
+call   26 never executed
+        1:   56:}
+        1:   56-block  0
+        1:   56-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:   56-block  2
+call    3 never executed
+------------------
+        -:   57:
+        4:   58:TEST(bta, swap) {
+        1:   59:    BitArray array1(1234, 111);
+        1:   60:    BitArray array2(4321, 423);
+        1:   61:    BitArray array3(array1);
+        -:   62:
+        -:   63:
+       1*:   64:    ASSERT_NE(array1, array2);
+       1*:   65:    ASSERT_EQ(array1, array3);
+        -:   66:
+        -:   67:
+        1:   68:    array2.swap(array3);
+        -:   69:
+       1*:   70:    ASSERT_NE(array1, array3);
+       1*:   71:    ASSERT_EQ(array1, array2);
+        -:   72:
+        -:   73:
+        1:   74:    array1.swap(array2);
+        -:   75:
+       1*:   76:    ASSERT_NE(array1, array3);
+       1*:   77:    ASSERT_EQ(array1, array2);
+        -:   78:
+        1:   79:}
+------------------
+_ZN13bta_swap_TestC1Ev:
+function _ZN13bta_swap_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   58:TEST(bta, swap) {
+        1:   58-block  0
+call    0 returned 1
+------------------
+_ZN13bta_swap_TestD0Ev:
+function _ZN13bta_swap_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   58:TEST(bta, swap) {
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN13bta_swap_TestD1Ev:
+function _ZN13bta_swap_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   58:TEST(bta, swap) {
+        1:   58-block  0
+call    0 returned 1
+------------------
+_ZN13bta_swap_Test8TestBodyEv:
+function _ZN13bta_swap_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:   58:TEST(bta, swap) {
+        1:   59:    BitArray array1(1234, 111);
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60:    BitArray array2(4321, 423);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61:    BitArray array3(array1);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   62:
+        -:   63:
+       1*:   64:    ASSERT_NE(array1, array2);
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   64-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   64-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   64-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   64-block  5
+call   16 never executed
+call   17 never executed
+        1:   64-block  6
+        1:   64-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   64-block  8
+    $$$$$:   64-block  9
+call   21 never executed
+    $$$$$:   64-block 10
+    $$$$$:   64-block 11
+call   22 never executed
+    $$$$$:   64-block 12
+    $$$$$:   64-block 13
+call   23 never executed
+       1*:   65:    ASSERT_EQ(array1, array3);
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   65-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   65-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   65-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   65-block  5
+call   16 never executed
+call   17 never executed
+        1:   65-block  6
+        1:   65-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   65-block  8
+    $$$$$:   65-block  9
+call   21 never executed
+    $$$$$:   65-block 10
+    $$$$$:   65-block 11
+call   22 never executed
+    $$$$$:   65-block 12
+    $$$$$:   65-block 13
+call   23 never executed
+        -:   66:
+        -:   67:
+        1:   68:    array2.swap(array3);
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:
+       1*:   70:    ASSERT_NE(array1, array3);
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   70-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   70-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   70-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   70-block  5
+call   16 never executed
+call   17 never executed
+        1:   70-block  6
+        1:   70-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   70-block  8
+    $$$$$:   70-block  9
+call   21 never executed
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+call   22 never executed
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+call   23 never executed
+       1*:   71:    ASSERT_EQ(array1, array2);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   71-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   71-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   71-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   71-block  5
+call   16 never executed
+call   17 never executed
+        1:   71-block  6
+        1:   71-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   71-block  8
+    $$$$$:   71-block  9
+call   21 never executed
+    $$$$$:   71-block 10
+    $$$$$:   71-block 11
+call   22 never executed
+    $$$$$:   71-block 12
+    $$$$$:   71-block 13
+call   23 never executed
+        -:   72:
+        -:   73:
+        1:   74:    array1.swap(array2);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   75:
+       1*:   76:    ASSERT_NE(array1, array3);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   76-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   76-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   76-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   76-block  5
+call   16 never executed
+call   17 never executed
+        1:   76-block  6
+        1:   76-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   76-block  8
+    $$$$$:   76-block  9
+call   21 never executed
+    $$$$$:   76-block 10
+    $$$$$:   76-block 11
+call   22 never executed
+    $$$$$:   76-block 12
+    $$$$$:   76-block 13
+call   23 never executed
+       1*:   77:    ASSERT_EQ(array1, array2);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   77-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   77-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   77-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   77-block  5
+call   16 never executed
+call   17 never executed
+        1:   77-block  6
+        1:   77-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   77-block  8
+    $$$$$:   77-block  9
+call   21 never executed
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+call   22 never executed
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+call   23 never executed
+        -:   78:
+        1:   79:}
+        1:   79-block  0
+        1:   79-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   79-block  2
+        1:   79-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   79-block  4
+        1:   79-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+    $$$$$:   79-block  6
+call    9 never executed
+    $$$$$:   79-block  7
+call   10 never executed
+    $$$$$:   79-block  8
+call   11 never executed
+------------------
+        -:   80:
+        4:   81:TEST(bta, set_reset) {
+        1:   82:    BitArray array(34, 3);
+        -:   83:
+        1:   84:    array.set(0, true);
+        -:   85:
+       1*:   86:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001100");
+        -:   87:
+        1:   88:    array.set(31, false);
+        -:   89:
+       1*:   90:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001000");
+        -:   91:
+        1:   92:    array.set(33, true);
+        -:   93:
+       1*:   94:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001001");
+        -:   95:
+        1:   96:    array.set();
+        -:   97:
+       1*:   98:    ASSERT_EQ(array.to_string(), "1111111111111111111111111111111111");
+        -:   99:
+        1:  100:    array.reset(0);
+        -:  101:
+       1*:  102:    ASSERT_EQ(array.to_string(), "0111111111111111111111111111111111");
+        -:  103:
+        1:  104:    array.reset(32);
+        -:  105:
+       1*:  106:    ASSERT_EQ(array.to_string(), "0111111111111111111111111111111101");
+        -:  107:
+        1:  108:    array.reset();
+        -:  109:
+       1*:  110:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000000000");
+        -:  111:
+        1:  112:}
+------------------
+_ZN18bta_set_reset_TestC1Ev:
+function _ZN18bta_set_reset_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   81:TEST(bta, set_reset) {
+        1:   81-block  0
+call    0 returned 1
+------------------
+_ZN18bta_set_reset_TestD0Ev:
+function _ZN18bta_set_reset_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   81:TEST(bta, set_reset) {
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN18bta_set_reset_TestD1Ev:
+function _ZN18bta_set_reset_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   81:TEST(bta, set_reset) {
+        1:   81-block  0
+call    0 returned 1
+------------------
+_ZN18bta_set_reset_Test8TestBodyEv:
+function _ZN18bta_set_reset_Test8TestBodyEv called 1 returned 100% blocks executed 35%
+        1:   81:TEST(bta, set_reset) {
+        1:   82:    BitArray array(34, 3);
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   83:
+        1:   84:    array.set(0, true);
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   85:
+       1*:   86:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001100");
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   86-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   86-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   86-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   86-block  6
+call   20 never executed
+call   21 never executed
+        1:   86-block  7
+        1:   86-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   86-block  9
+    $$$$$:   86-block 10
+call   25 never executed
+    $$$$$:   86-block 11
+    $$$$$:   86-block 12
+call   26 never executed
+    $$$$$:   86-block 13
+    $$$$$:   86-block 14
+call   27 never executed
+    $$$$$:   86-block 15
+    $$$$$:   86-block 16
+call   28 never executed
+        -:   87:
+        1:   88:    array.set(31, false);
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   89:
+       1*:   90:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001000");
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   90-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   90-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   90-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   90-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   90-block  6
+call   20 never executed
+call   21 never executed
+        1:   90-block  7
+        1:   90-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   90-block  9
+    $$$$$:   90-block 10
+call   25 never executed
+    $$$$$:   90-block 11
+    $$$$$:   90-block 12
+call   26 never executed
+    $$$$$:   90-block 13
+    $$$$$:   90-block 14
+call   27 never executed
+    $$$$$:   90-block 15
+    $$$$$:   90-block 16
+call   28 never executed
+        -:   91:
+        1:   92:    array.set(33, true);
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   93:
+       1*:   94:    ASSERT_EQ(array.to_string(), "1000000000000000000000000000001001");
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   94-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   94-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   94-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   94-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   94-block  6
+call   20 never executed
+call   21 never executed
+        1:   94-block  7
+        1:   94-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   94-block  9
+    $$$$$:   94-block 10
+call   25 never executed
+    $$$$$:   94-block 11
+    $$$$$:   94-block 12
+call   26 never executed
+    $$$$$:   94-block 13
+    $$$$$:   94-block 14
+call   27 never executed
+    $$$$$:   94-block 15
+    $$$$$:   94-block 16
+call   28 never executed
+        -:   95:
+        1:   96:    array.set();
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   97:
+       1*:   98:    ASSERT_EQ(array.to_string(), "1111111111111111111111111111111111");
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   98-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   98-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   98-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   98-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   98-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   98-block  6
+call   20 never executed
+call   21 never executed
+        1:   98-block  7
+        1:   98-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   98-block  9
+    $$$$$:   98-block 10
+call   25 never executed
+    $$$$$:   98-block 11
+    $$$$$:   98-block 12
+call   26 never executed
+    $$$$$:   98-block 13
+    $$$$$:   98-block 14
+call   27 never executed
+    $$$$$:   98-block 15
+    $$$$$:   98-block 16
+call   28 never executed
+        -:   99:
+        1:  100:    array.reset(0);
+        1:  100-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  101:
+       1*:  102:    ASSERT_EQ(array.to_string(), "0111111111111111111111111111111111");
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  102-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  102-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  102-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  102-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  102-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  102-block  6
+call   20 never executed
+call   21 never executed
+        1:  102-block  7
+        1:  102-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  102-block  9
+    $$$$$:  102-block 10
+call   25 never executed
+    $$$$$:  102-block 11
+    $$$$$:  102-block 12
+call   26 never executed
+    $$$$$:  102-block 13
+    $$$$$:  102-block 14
+call   27 never executed
+    $$$$$:  102-block 15
+    $$$$$:  102-block 16
+call   28 never executed
+        -:  103:
+        1:  104:    array.reset(32);
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  105:
+       1*:  106:    ASSERT_EQ(array.to_string(), "0111111111111111111111111111111101");
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  106-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  106-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  106-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  106-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  106-block  6
+call   20 never executed
+call   21 never executed
+        1:  106-block  7
+        1:  106-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  106-block  9
+    $$$$$:  106-block 10
+call   25 never executed
+    $$$$$:  106-block 11
+    $$$$$:  106-block 12
+call   26 never executed
+    $$$$$:  106-block 13
+    $$$$$:  106-block 14
+call   27 never executed
+    $$$$$:  106-block 15
+    $$$$$:  106-block 16
+call   28 never executed
+        -:  107:
+        1:  108:    array.reset();
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  109:
+       1*:  110:    ASSERT_EQ(array.to_string(), "0000000000000000000000000000000000");
+        1:  110-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  110-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  110-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  110-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  110-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  110-block  6
+call   20 never executed
+call   21 never executed
+        1:  110-block  7
+        1:  110-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  110-block  9
+    $$$$$:  110-block 10
+call   25 never executed
+    $$$$$:  110-block 11
+    $$$$$:  110-block 12
+call   26 never executed
+    $$$$$:  110-block 13
+    $$$$$:  110-block 14
+call   27 never executed
+    $$$$$:  110-block 15
+    $$$$$:  110-block 16
+call   28 never executed
+        -:  111:
+        1:  112:}
+        1:  112-block  0
+        1:  112-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  112-block  2
+call    3 never executed
+------------------
+        -:  113:
+        4:  114:TEST(bta, any_none) {
+        1:  115:    BitArray array(34, 3);
+        -:  116:
+        -:  117:
+       1*:  118:    ASSERT_EQ(array.any(), true);
+       1*:  119:    ASSERT_EQ(array.none(), false);
+        -:  120:
+        1:  121:    array.set(0, false);
+        -:  122:
+       1*:  123:    ASSERT_EQ(array.any(), true);
+       1*:  124:    ASSERT_EQ(array.none(), false);
+        -:  125:
+        1:  126:    array.set(31, false);
+        -:  127:
+       1*:  128:    ASSERT_EQ(array.any(), true);
+       1*:  129:    ASSERT_EQ(array.none(), false);
+        -:  130:
+        1:  131:    array.set(30, false);
+        -:  132:
+       1*:  133:    ASSERT_EQ(array.any(), false);
+       1*:  134:    ASSERT_EQ(array.none(), true);
+        -:  135:
+        1:  136:    array.set();
+        -:  137:
+       1*:  138:    ASSERT_EQ(array.any(), true);
+       1*:  139:    ASSERT_EQ(array.none(), false);
+        -:  140:
+        1:  141:    array.reset();
+        -:  142:
+       1*:  143:    ASSERT_EQ(array.any(), false);
+       1*:  144:    ASSERT_EQ(array.none(), true);
+        1:  145:}
+------------------
+_ZN17bta_any_none_TestC1Ev:
+function _ZN17bta_any_none_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  114:TEST(bta, any_none) {
+        1:  114-block  0
+call    0 returned 1
+------------------
+_ZN17bta_any_none_TestD0Ev:
+function _ZN17bta_any_none_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  114:TEST(bta, any_none) {
+        1:  114-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN17bta_any_none_TestD1Ev:
+function _ZN17bta_any_none_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  114:TEST(bta, any_none) {
+        1:  114-block  0
+call    0 returned 1
+------------------
+_ZN17bta_any_none_Test8TestBodyEv:
+function _ZN17bta_any_none_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:  114:TEST(bta, any_none) {
+        1:  115:    BitArray array(34, 3);
+        1:  115-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  116:
+        -:  117:
+       1*:  118:    ASSERT_EQ(array.any(), true);
+        1:  118-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  118-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  118-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  118-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  118-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  118-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  118-block  6
+call   19 never executed
+call   20 never executed
+        1:  118-block  7
+        1:  118-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  118-block  9
+    $$$$$:  118-block 10
+    $$$$$:  118-block 11
+    $$$$$:  118-block 12
+call   24 never executed
+    $$$$$:  118-block 13
+    $$$$$:  118-block 14
+call   25 never executed
+    $$$$$:  118-block 15
+    $$$$$:  118-block 16
+call   26 never executed
+       1*:  119:    ASSERT_EQ(array.none(), false);
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  119-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  119-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  119-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  119-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  119-block  6
+call   19 never executed
+call   20 never executed
+        1:  119-block  7
+        1:  119-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  119-block  9
+    $$$$$:  119-block 10
+    $$$$$:  119-block 11
+    $$$$$:  119-block 12
+call   24 never executed
+    $$$$$:  119-block 13
+    $$$$$:  119-block 14
+call   25 never executed
+    $$$$$:  119-block 15
+    $$$$$:  119-block 16
+call   26 never executed
+        -:  120:
+        1:  121:    array.set(0, false);
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  122:
+       1*:  123:    ASSERT_EQ(array.any(), true);
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  123-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  123-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  123-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  123-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  123-block  6
+call   19 never executed
+call   20 never executed
+        1:  123-block  7
+        1:  123-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  123-block  9
+    $$$$$:  123-block 10
+    $$$$$:  123-block 11
+    $$$$$:  123-block 12
+call   24 never executed
+    $$$$$:  123-block 13
+    $$$$$:  123-block 14
+call   25 never executed
+    $$$$$:  123-block 15
+    $$$$$:  123-block 16
+call   26 never executed
+       1*:  124:    ASSERT_EQ(array.none(), false);
+        1:  124-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  124-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  124-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  124-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  124-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  124-block  6
+call   19 never executed
+call   20 never executed
+        1:  124-block  7
+        1:  124-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  124-block  9
+    $$$$$:  124-block 10
+    $$$$$:  124-block 11
+    $$$$$:  124-block 12
+call   24 never executed
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+call   25 never executed
+    $$$$$:  124-block 15
+    $$$$$:  124-block 16
+call   26 never executed
+        -:  125:
+        1:  126:    array.set(31, false);
+        1:  126-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  127:
+       1*:  128:    ASSERT_EQ(array.any(), true);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  128-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  128-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  128-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  128-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  128-block  6
+call   19 never executed
+call   20 never executed
+        1:  128-block  7
+        1:  128-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  128-block  9
+    $$$$$:  128-block 10
+    $$$$$:  128-block 11
+    $$$$$:  128-block 12
+call   24 never executed
+    $$$$$:  128-block 13
+    $$$$$:  128-block 14
+call   25 never executed
+    $$$$$:  128-block 15
+    $$$$$:  128-block 16
+call   26 never executed
+       1*:  129:    ASSERT_EQ(array.none(), false);
+        1:  129-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  129-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  129-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  129-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  129-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  129-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  129-block  6
+call   19 never executed
+call   20 never executed
+        1:  129-block  7
+        1:  129-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  129-block  9
+    $$$$$:  129-block 10
+    $$$$$:  129-block 11
+    $$$$$:  129-block 12
+call   24 never executed
+    $$$$$:  129-block 13
+    $$$$$:  129-block 14
+call   25 never executed
+    $$$$$:  129-block 15
+    $$$$$:  129-block 16
+call   26 never executed
+        -:  130:
+        1:  131:    array.set(30, false);
+        1:  131-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  132:
+       1*:  133:    ASSERT_EQ(array.any(), false);
+        1:  133-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  133-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  133-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  133-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  133-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  133-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  133-block  6
+call   19 never executed
+call   20 never executed
+        1:  133-block  7
+        1:  133-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  133-block  9
+    $$$$$:  133-block 10
+    $$$$$:  133-block 11
+    $$$$$:  133-block 12
+call   24 never executed
+    $$$$$:  133-block 13
+    $$$$$:  133-block 14
+call   25 never executed
+    $$$$$:  133-block 15
+    $$$$$:  133-block 16
+call   26 never executed
+       1*:  134:    ASSERT_EQ(array.none(), true);
+        1:  134-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  134-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  134-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  134-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  134-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  134-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  134-block  6
+call   19 never executed
+call   20 never executed
+        1:  134-block  7
+        1:  134-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  134-block  9
+    $$$$$:  134-block 10
+    $$$$$:  134-block 11
+    $$$$$:  134-block 12
+call   24 never executed
+    $$$$$:  134-block 13
+    $$$$$:  134-block 14
+call   25 never executed
+    $$$$$:  134-block 15
+    $$$$$:  134-block 16
+call   26 never executed
+        -:  135:
+        1:  136:    array.set();
+        1:  136-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  137:
+       1*:  138:    ASSERT_EQ(array.any(), true);
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  138-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  138-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  138-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  138-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  138-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  138-block  6
+call   19 never executed
+call   20 never executed
+        1:  138-block  7
+        1:  138-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  138-block  9
+    $$$$$:  138-block 10
+    $$$$$:  138-block 11
+    $$$$$:  138-block 12
+call   24 never executed
+    $$$$$:  138-block 13
+    $$$$$:  138-block 14
+call   25 never executed
+    $$$$$:  138-block 15
+    $$$$$:  138-block 16
+call   26 never executed
+       1*:  139:    ASSERT_EQ(array.none(), false);
+        1:  139-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  139-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  139-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  139-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  139-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  139-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  139-block  6
+call   19 never executed
+call   20 never executed
+        1:  139-block  7
+        1:  139-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  139-block  9
+    $$$$$:  139-block 10
+    $$$$$:  139-block 11
+    $$$$$:  139-block 12
+call   24 never executed
+    $$$$$:  139-block 13
+    $$$$$:  139-block 14
+call   25 never executed
+    $$$$$:  139-block 15
+    $$$$$:  139-block 16
+call   26 never executed
+        -:  140:
+        1:  141:    array.reset();
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  142:
+       1*:  143:    ASSERT_EQ(array.any(), false);
+        1:  143-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  143-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  143-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  143-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  143-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  143-block  6
+call   19 never executed
+call   20 never executed
+        1:  143-block  7
+        1:  143-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  143-block  9
+    $$$$$:  143-block 10
+    $$$$$:  143-block 11
+    $$$$$:  143-block 12
+call   24 never executed
+    $$$$$:  143-block 13
+    $$$$$:  143-block 14
+call   25 never executed
+    $$$$$:  143-block 15
+    $$$$$:  143-block 16
+call   26 never executed
+       1*:  144:    ASSERT_EQ(array.none(), true);
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  144-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  144-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  144-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  144-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  144-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  144-block  6
+call   19 never executed
+call   20 never executed
+        1:  144-block  7
+        1:  144-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  144-block  9
+    $$$$$:  144-block 10
+    $$$$$:  144-block 11
+    $$$$$:  144-block 12
+call   24 never executed
+    $$$$$:  144-block 13
+    $$$$$:  144-block 14
+call   25 never executed
+    $$$$$:  144-block 15
+    $$$$$:  144-block 16
+call   26 never executed
+        1:  145:}
+        1:  145-block  0
+        1:  145-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  145-block  2
+call    3 never executed
+------------------
+        -:  146:
+        4:  147:TEST(bta, inverse) {
+        1:  148:    BitArray array(63, 123123);
+        -:  149:
+       1*:  150:    ASSERT_EQ(array.to_string(), "000000000000000111100000111100110000000000000000000000000000000");
+        -:  151:
+        1:  152:    array = ~array;
+        -:  153:
+       1*:  154:    ASSERT_EQ(array.to_string(), "111111111111111000011111000011001111111111111111111111111111111");
+        1:  155:}
+------------------
+_ZN16bta_inverse_TestC1Ev:
+function _ZN16bta_inverse_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  147:TEST(bta, inverse) {
+        1:  147-block  0
+call    0 returned 1
+------------------
+_ZN16bta_inverse_TestD0Ev:
+function _ZN16bta_inverse_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  147:TEST(bta, inverse) {
+        1:  147-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN16bta_inverse_TestD1Ev:
+function _ZN16bta_inverse_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  147:TEST(bta, inverse) {
+        1:  147-block  0
+call    0 returned 1
+------------------
+_ZN16bta_inverse_Test8TestBodyEv:
+function _ZN16bta_inverse_Test8TestBodyEv called 1 returned 100% blocks executed 39%
+        1:  147:TEST(bta, inverse) {
+        1:  148:    BitArray array(63, 123123);
+        1:  148-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  149:
+       1*:  150:    ASSERT_EQ(array.to_string(), "000000000000000111100000111100110000000000000000000000000000000");
+        1:  150-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  150-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  150-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  150-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  150-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  150-block  6
+call   20 never executed
+call   21 never executed
+        1:  150-block  7
+        1:  150-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  150-block  9
+    $$$$$:  150-block 10
+call   25 never executed
+    $$$$$:  150-block 11
+    $$$$$:  150-block 12
+call   26 never executed
+    $$$$$:  150-block 13
+    $$$$$:  150-block 14
+call   27 never executed
+    $$$$$:  150-block 15
+    $$$$$:  150-block 16
+call   28 never executed
+        -:  151:
+        1:  152:    array = ~array;
+        1:  152-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  152-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  152-block  2
+call    6 returned 1
+    $$$$$:  152-block  3
+call    7 never executed
+    $$$$$:  152-block  4
+        -:  153:
+       1*:  154:    ASSERT_EQ(array.to_string(), "111111111111111000011111000011001111111111111111111111111111111");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  154-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  154-block  1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  154-block  2
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  154-block  3
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  154-block  4
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  154-block  5
+call   20 never executed
+call   21 never executed
+        1:  154-block  6
+        1:  154-block  7
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  154-block  8
+    $$$$$:  154-block  9
+call   25 never executed
+    $$$$$:  154-block 10
+    $$$$$:  154-block 11
+call   26 never executed
+    $$$$$:  154-block 12
+    $$$$$:  154-block 13
+call   27 never executed
+    $$$$$:  154-block 14
+    $$$$$:  154-block 15
+call   28 never executed
+        1:  155:}
+        1:  155-block  0
+        1:  155-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  155-block  2
+call    3 never executed
+------------------
+        -:  156:
+        4:  157:TEST(bta, count) {
+        -:  158:
+        1:  159:    BitArray array(63, 123123);
+        -:  160:
+       1*:  161:    ASSERT_EQ(array.count(), 10);
+        -:  162:
+        1:  163:    array.reset();
+        -:  164:
+       1*:  165:    ASSERT_EQ(array.count(), 0);
+        -:  166:
+        -:  167:
+        1:  168:    BitArray array2(32, 1);
+        -:  169:
+       1*:  170:    ASSERT_EQ(array2.count(), 1);
+        1:  171:}
+------------------
+_ZN14bta_count_TestC1Ev:
+function _ZN14bta_count_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  157:TEST(bta, count) {
+        1:  157-block  0
+call    0 returned 1
+------------------
+_ZN14bta_count_TestD0Ev:
+function _ZN14bta_count_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  157:TEST(bta, count) {
+        1:  157-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN14bta_count_TestD1Ev:
+function _ZN14bta_count_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  157:TEST(bta, count) {
+        1:  157-block  0
+call    0 returned 1
+------------------
+_ZN14bta_count_Test8TestBodyEv:
+function _ZN14bta_count_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:  157:TEST(bta, count) {
+        -:  158:
+        1:  159:    BitArray array(63, 123123);
+        1:  159-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  160:
+       1*:  161:    ASSERT_EQ(array.count(), 10);
+        1:  161-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  161-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  161-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  161-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  161-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  161-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  161-block  6
+call   19 never executed
+call   20 never executed
+        1:  161-block  7
+        1:  161-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  161-block  9
+    $$$$$:  161-block 10
+    $$$$$:  161-block 11
+    $$$$$:  161-block 12
+call   24 never executed
+    $$$$$:  161-block 13
+    $$$$$:  161-block 14
+call   25 never executed
+    $$$$$:  161-block 15
+    $$$$$:  161-block 16
+call   26 never executed
+        -:  162:
+        1:  163:    array.reset();
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  164:
+       1*:  165:    ASSERT_EQ(array.count(), 0);
+        1:  165-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  165-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  165-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  165-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  165-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  165-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  165-block  6
+call   19 never executed
+call   20 never executed
+        1:  165-block  7
+        1:  165-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  165-block  9
+    $$$$$:  165-block 10
+    $$$$$:  165-block 11
+    $$$$$:  165-block 12
+call   24 never executed
+    $$$$$:  165-block 13
+    $$$$$:  165-block 14
+call   25 never executed
+    $$$$$:  165-block 15
+    $$$$$:  165-block 16
+call   26 never executed
+        -:  166:
+        -:  167:
+        1:  168:    BitArray array2(32, 1);
+        1:  168-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  168-block  1
+call    3 never executed
+        -:  169:
+       1*:  170:    ASSERT_EQ(array2.count(), 1);
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  170-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  170-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  170-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  170-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  170-block  6
+call   19 never executed
+call   20 never executed
+        1:  170-block  7
+        1:  170-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  170-block  9
+    $$$$$:  170-block 10
+    $$$$$:  170-block 11
+    $$$$$:  170-block 12
+call   24 never executed
+    $$$$$:  170-block 13
+    $$$$$:  170-block 14
+call   25 never executed
+    $$$$$:  170-block 15
+    $$$$$:  170-block 16
+call   26 never executed
+        1:  171:}
+        1:  171-block  0
+        1:  171-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  171-block  2
+call    3 never executed
+------------------
+        -:  172:
+        -:  173:
+        4:  174:TEST(bta, empty) {
+        1:  175:    BitArray array(0, 0);
+        -:  176:
+       1*:  177:    ASSERT_EQ(array.empty(), true);
+        -:  178:
+        1:  179:    array.resize(1, true);
+        -:  180:
+       1*:  181:    ASSERT_EQ(array.empty(), false);
+        -:  182:
+        1:  183:}
+------------------
+_ZN14bta_empty_TestC1Ev:
+function _ZN14bta_empty_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  174:TEST(bta, empty) {
+        1:  174-block  0
+call    0 returned 1
+------------------
+_ZN14bta_empty_TestD0Ev:
+function _ZN14bta_empty_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  174:TEST(bta, empty) {
+        1:  174-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN14bta_empty_TestD1Ev:
+function _ZN14bta_empty_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  174:TEST(bta, empty) {
+        1:  174-block  0
+call    0 returned 1
+------------------
+_ZN14bta_empty_Test8TestBodyEv:
+function _ZN14bta_empty_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:  174:TEST(bta, empty) {
+        1:  175:    BitArray array(0, 0);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  176:
+       1*:  177:    ASSERT_EQ(array.empty(), true);
+        1:  177-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  177-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  177-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  177-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  177-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  177-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  177-block  6
+call   19 never executed
+call   20 never executed
+        1:  177-block  7
+        1:  177-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  177-block  9
+    $$$$$:  177-block 10
+    $$$$$:  177-block 11
+    $$$$$:  177-block 12
+call   24 never executed
+    $$$$$:  177-block 13
+    $$$$$:  177-block 14
+call   25 never executed
+    $$$$$:  177-block 15
+    $$$$$:  177-block 16
+call   26 never executed
+        -:  178:
+        1:  179:    array.resize(1, true);
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  180:
+       1*:  181:    ASSERT_EQ(array.empty(), false);
+        1:  181-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  181-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  181-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  181-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  181-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  181-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  181-block  6
+call   19 never executed
+call   20 never executed
+        1:  181-block  7
+        1:  181-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  181-block  9
+    $$$$$:  181-block 10
+    $$$$$:  181-block 11
+    $$$$$:  181-block 12
+call   24 never executed
+    $$$$$:  181-block 13
+    $$$$$:  181-block 14
+call   25 never executed
+    $$$$$:  181-block 15
+    $$$$$:  181-block 16
+call   26 never executed
+        -:  182:
+        1:  183:}
+        1:  183-block  0
+        1:  183-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  183-block  2
+call    3 never executed
+------------------
+        -:  184:
+        4:  185:TEST(bta, push_back) {
+        1:  186:    BitArray array(0, 0);
+        -:  187:
+       1*:  188:    ASSERT_EQ(array.count(), 0);
+        -:  189:
+        1:  190:    array.push_back(true);
+        -:  191:
+       1*:  192:    ASSERT_EQ(array.to_string(), "1");
+        -:  193:
+        1:  194:    array.push_back(false);
+        -:  195:
+       1*:  196:    ASSERT_EQ(array.to_string(), "10");
+        -:  197:
+        1:  198:}
+------------------
+_ZN18bta_push_back_TestC1Ev:
+function _ZN18bta_push_back_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  185:TEST(bta, push_back) {
+        1:  185-block  0
+call    0 returned 1
+------------------
+_ZN18bta_push_back_TestD0Ev:
+function _ZN18bta_push_back_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  185:TEST(bta, push_back) {
+        1:  185-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN18bta_push_back_TestD1Ev:
+function _ZN18bta_push_back_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  185:TEST(bta, push_back) {
+        1:  185-block  0
+call    0 returned 1
+------------------
+_ZN18bta_push_back_Test8TestBodyEv:
+function _ZN18bta_push_back_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:  185:TEST(bta, push_back) {
+        1:  186:    BitArray array(0, 0);
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  187:
+       1*:  188:    ASSERT_EQ(array.count(), 0);
+        1:  188-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  188-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  188-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  188-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  188-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  188-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  188-block  6
+call   19 never executed
+call   20 never executed
+        1:  188-block  7
+        1:  188-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  188-block  9
+    $$$$$:  188-block 10
+    $$$$$:  188-block 11
+    $$$$$:  188-block 12
+call   24 never executed
+    $$$$$:  188-block 13
+    $$$$$:  188-block 14
+call   25 never executed
+    $$$$$:  188-block 15
+    $$$$$:  188-block 16
+call   26 never executed
+        -:  189:
+        1:  190:    array.push_back(true);
+        1:  190-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  191:
+       1*:  192:    ASSERT_EQ(array.to_string(), "1");
+        1:  192-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  192-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  192-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  192-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  192-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  192-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  192-block  6
+call   20 never executed
+call   21 never executed
+        1:  192-block  7
+        1:  192-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  192-block  9
+    $$$$$:  192-block 10
+call   25 never executed
+    $$$$$:  192-block 11
+    $$$$$:  192-block 12
+call   26 never executed
+    $$$$$:  192-block 13
+    $$$$$:  192-block 14
+call   27 never executed
+    $$$$$:  192-block 15
+    $$$$$:  192-block 16
+call   28 never executed
+        -:  193:
+        1:  194:    array.push_back(false);
+        1:  194-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  195:
+       1*:  196:    ASSERT_EQ(array.to_string(), "10");
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  196-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  196-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  196-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  196-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  196-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  196-block  6
+call   20 never executed
+call   21 never executed
+        1:  196-block  7
+        1:  196-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  196-block  9
+    $$$$$:  196-block 10
+call   25 never executed
+    $$$$$:  196-block 11
+    $$$$$:  196-block 12
+call   26 never executed
+    $$$$$:  196-block 13
+    $$$$$:  196-block 14
+call   27 never executed
+    $$$$$:  196-block 15
+    $$$$$:  196-block 16
+call   28 never executed
+        -:  197:
+        1:  198:}
+        1:  198-block  0
+        1:  198-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+    $$$$$:  198-block  2
+call    3 never executed
+------------------
+        -:  199:
+        4:  200:TEST(bta, operator_compare_pos) {
+        1:  201:    BitArray array1(1000, 0);
+        1:  202:    BitArray array2(1000, 1);
+        1:  203:    BitArray array3(50, 1);
+        1:  204:    BitArray array4(100, 1);
+        1:  205:    BitArray array5(1000, 1);
+        -:  206:
+       1*:  207:    ASSERT_EQ(array1==array2, false);
+       1*:  208:    ASSERT_EQ(array3==array4, false);
+       1*:  209:    ASSERT_EQ(array2==array3, false);
+       1*:  210:    ASSERT_EQ(array2==array5, true);
+        -:  211:
+        -:  212:
+        1:  213:    bool is = array2[0];
+        -:  214:
+       1*:  215:    ASSERT_EQ(is, false);
+        -:  216:
+        1:  217:    is = array2[31];
+        -:  218:
+       1*:  219:    ASSERT_EQ(is, true);
+        -:  220:
+       1*:  221:    EXPECT_THROW(is = array2[100000], std::out_of_range);
+        -:  222:
+        1:  223:}
+------------------
+_ZN29bta_operator_compare_pos_TestC1Ev:
+function _ZN29bta_operator_compare_pos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  200:TEST(bta, operator_compare_pos) {
+        1:  200-block  0
+call    0 returned 1
+------------------
+_ZN29bta_operator_compare_pos_TestD0Ev:
+function _ZN29bta_operator_compare_pos_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  200:TEST(bta, operator_compare_pos) {
+        1:  200-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29bta_operator_compare_pos_TestD1Ev:
+function _ZN29bta_operator_compare_pos_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  200:TEST(bta, operator_compare_pos) {
+        1:  200-block  0
+call    0 returned 1
+------------------
+_ZN29bta_operator_compare_pos_Test8TestBodyEv:
+function _ZN29bta_operator_compare_pos_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:  200:TEST(bta, operator_compare_pos) {
+        1:  201:    BitArray array1(1000, 0);
+        1:  201-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  202:    BitArray array2(1000, 1);
+        1:  202-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  203:    BitArray array3(50, 1);
+        1:  203-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  204:    BitArray array4(100, 1);
+        1:  204-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  205:    BitArray array5(1000, 1);
+        1:  205-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  206:
+       1*:  207:    ASSERT_EQ(array1==array2, false);
+        1:  207-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  207-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  207-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  207-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  207-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  207-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  207-block  6
+call   19 never executed
+call   20 never executed
+        1:  207-block  7
+        1:  207-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  207-block  9
+    $$$$$:  207-block 10
+    $$$$$:  207-block 11
+    $$$$$:  207-block 12
+call   24 never executed
+    $$$$$:  207-block 13
+    $$$$$:  207-block 14
+call   25 never executed
+    $$$$$:  207-block 15
+    $$$$$:  207-block 16
+call   26 never executed
+       1*:  208:    ASSERT_EQ(array3==array4, false);
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  208-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  208-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  208-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  208-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  208-block  6
+call   19 never executed
+call   20 never executed
+        1:  208-block  7
+        1:  208-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  208-block  9
+    $$$$$:  208-block 10
+    $$$$$:  208-block 11
+    $$$$$:  208-block 12
+call   24 never executed
+    $$$$$:  208-block 13
+    $$$$$:  208-block 14
+call   25 never executed
+    $$$$$:  208-block 15
+    $$$$$:  208-block 16
+call   26 never executed
+       1*:  209:    ASSERT_EQ(array2==array3, false);
+        1:  209-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  209-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  209-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  209-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  209-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  209-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  209-block  6
+call   19 never executed
+call   20 never executed
+        1:  209-block  7
+        1:  209-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  209-block  9
+    $$$$$:  209-block 10
+    $$$$$:  209-block 11
+    $$$$$:  209-block 12
+call   24 never executed
+    $$$$$:  209-block 13
+    $$$$$:  209-block 14
+call   25 never executed
+    $$$$$:  209-block 15
+    $$$$$:  209-block 16
+call   26 never executed
+       1*:  210:    ASSERT_EQ(array2==array5, true);
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  210-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  210-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  210-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  210-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  210-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  210-block  6
+call   19 never executed
+call   20 never executed
+        1:  210-block  7
+        1:  210-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  210-block  9
+    $$$$$:  210-block 10
+    $$$$$:  210-block 11
+    $$$$$:  210-block 12
+call   24 never executed
+    $$$$$:  210-block 13
+    $$$$$:  210-block 14
+call   25 never executed
+    $$$$$:  210-block 15
+    $$$$$:  210-block 16
+call   26 never executed
+        -:  211:
+        -:  212:
+        1:  213:    bool is = array2[0];
+        1:  213-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  214:
+       1*:  215:    ASSERT_EQ(is, false);
+        1:  215-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  215-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  215-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  215-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  215-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  215-block  5
+call   16 never executed
+call   17 never executed
+        1:  215-block  6
+        1:  215-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  215-block  8
+    $$$$$:  215-block  9
+    $$$$$:  215-block 10
+call   21 never executed
+    $$$$$:  215-block 11
+    $$$$$:  215-block 12
+call   22 never executed
+    $$$$$:  215-block 13
+    $$$$$:  215-block 14
+call   23 never executed
+        -:  216:
+        1:  217:    is = array2[31];
+        1:  217-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  218:
+       1*:  219:    ASSERT_EQ(is, true);
+        1:  219-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  219-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  219-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  219-block  3
+call    9 never executed
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  219-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  219-block  5
+call   16 never executed
+call   17 never executed
+        1:  219-block  6
+        1:  219-block  7
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  219-block  8
+    $$$$$:  219-block  9
+    $$$$$:  219-block 10
+call   21 never executed
+    $$$$$:  219-block 11
+    $$$$$:  219-block 12
+call   22 never executed
+    $$$$$:  219-block 13
+    $$$$$:  219-block 14
+call   23 never executed
+        -:  220:
+       1*:  221:    EXPECT_THROW(is = array2[100000], std::out_of_range);
+        1:  221-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1
+branch  3 taken 0
+        1:  221-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  221-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  221-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  221-block  4
+        1:  221-block  5
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  221-block  6
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  221-block  7
+    %%%%%:  221-block  8
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  221-block  9
+call   20 never executed
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  221-block 10
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:  221-block 11
+call   27 never executed
+call   28 never executed
+        1:  221-block 12
+call   29 returned 1
+        1:  221-block 13
+branch 30 taken 1
+branch 31 taken 0
+branch 32 taken 0
+        1:  221-block 14
+call   33 returned 1
+call   34 returned 1
+    $$$$$:  221-block 15
+call   35 never executed
+call   36 never executed
+branch 37 never executed (fallthrough)
+branch 38 never executed (throw)
+    $$$$$:  221-block 16
+call   39 never executed
+branch 40 never executed (fallthrough)
+branch 41 never executed (throw)
+    $$$$$:  221-block 17
+call   42 never executed
+branch 43 never executed (fallthrough)
+branch 44 never executed (throw)
+    $$$$$:  221-block 18
+call   45 never executed
+call   46 never executed
+branch 47 never executed (fallthrough)
+branch 48 never executed (throw)
+    $$$$$:  221-block 19
+call   49 never executed
+call   50 never executed
+branch 51 never executed (fallthrough)
+branch 52 never executed (throw)
+    $$$$$:  221-block 20
+call   53 never executed
+branch 54 never executed (fallthrough)
+branch 55 never executed (throw)
+    $$$$$:  221-block 21
+    $$$$$:  221-block 22
+call   56 never executed
+    $$$$$:  221-block 23
+call   57 never executed
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:  221-block 24
+    $$$$$:  221-block 25
+call   61 never executed
+branch 62 never executed (fallthrough)
+branch 63 never executed (throw)
+    $$$$$:  221-block 26
+call   64 never executed
+    $$$$$:  221-block 27
+    $$$$$:  221-block 28
+call   65 never executed
+    $$$$$:  221-block 29
+call   66 never executed
+    $$$$$:  221-block 30
+call   67 never executed
+    $$$$$:  221-block 31
+    $$$$$:  221-block 32
+call   68 never executed
+    $$$$$:  221-block 33
+    $$$$$:  221-block 34
+call   69 never executed
+        -:  222:
+        1:  223:}
+        1:  223-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  223-block  1
+        1:  223-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  223-block  3
+        1:  223-block  4
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  223-block  5
+        1:  223-block  6
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  223-block  7
+        1:  223-block  8
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:  223-block  9
+call   15 never executed
+    $$$$$:  223-block 10
+call   16 never executed
+    $$$$$:  223-block 11
+call   17 never executed
+    $$$$$:  223-block 12
+call   18 never executed
+    $$$$$:  223-block 13
+call   19 never executed
+------------------
+        -:  224:
+        4:  225:TEST(bta, operators_bits) {
+        1:  226:    BitArray array1(33, 123123);
+        1:  227:    BitArray array2(33, 122122);
+        -:  228:
+        -:  229:    //000000000000000111100000111100110
+        -:  230:    //000000000000000111011101000010100
+        -:  231:
+        -:  232:    //000000000000000111000000000000100 &
+        -:  233:    //000000000000000111111101111110110 |
+        -:  234:    //000000000000000000111101111110010 ^
+        -:  235:
+        1:  236:    BitArray array3 = array1&array2;
+        1:  237:    BitArray array4 = array1|array2;
+        1:  238:    BitArray array5 = array1^array2;
+        -:  239:
+       1*:  240:    ASSERT_EQ(array3.to_string(), "000000000000000111000000000000100");
+       1*:  241:    ASSERT_EQ(array4.to_string(), "000000000000000111111101111110110");
+       1*:  242:    ASSERT_EQ(array5.to_string(), "000000000000000000111101111110010");
+        -:  243:
+        -:  244:
+        2:  245:    BitArray array6(34, 123123);
+        2:  246:    BitArray array7(33, 122122);
+        -:  247:
+        -:  248:
+       1*:  249:    EXPECT_THROW(array3 = array6&array7, std::invalid_argument);
+       1*:  250:    EXPECT_THROW(array3 = array6|array7, std::invalid_argument);
+       1*:  251:    EXPECT_THROW(array3 = array6^array7, std::invalid_argument);
+        -:  252:
+        1:  253:}
+------------------
+_ZN23bta_operators_bits_TestC1Ev:
+function _ZN23bta_operators_bits_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  225:TEST(bta, operators_bits) {
+        1:  225-block  0
+call    0 returned 1
+------------------
+_ZN23bta_operators_bits_TestD0Ev:
+function _ZN23bta_operators_bits_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  225:TEST(bta, operators_bits) {
+        1:  225-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23bta_operators_bits_TestD1Ev:
+function _ZN23bta_operators_bits_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  225:TEST(bta, operators_bits) {
+        1:  225-block  0
+call    0 returned 1
+------------------
+_ZN23bta_operators_bits_Test8TestBodyEv:
+function _ZN23bta_operators_bits_Test8TestBodyEv called 1 returned 100% blocks executed 30%
+        1:  225:TEST(bta, operators_bits) {
+        1:  226:    BitArray array1(33, 123123);
+        1:  226-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  227:    BitArray array2(33, 122122);
+        1:  227-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  228:
+        -:  229:    //000000000000000111100000111100110
+        -:  230:    //000000000000000111011101000010100
+        -:  231:
+        -:  232:    //000000000000000111000000000000100 &
+        -:  233:    //000000000000000111111101111110110 |
+        -:  234:    //000000000000000000111101111110010 ^
+        -:  235:
+        1:  236:    BitArray array3 = array1&array2;
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  237:    BitArray array4 = array1|array2;
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  238:    BitArray array5 = array1^array2;
+        1:  238-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  239:
+       1*:  240:    ASSERT_EQ(array3.to_string(), "000000000000000111000000000000100");
+        1:  240-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  240-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  240-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  240-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  240-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  240-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  240-block  6
+call   20 never executed
+call   21 never executed
+        1:  240-block  7
+        1:  240-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  240-block  9
+    $$$$$:  240-block 10
+call   25 never executed
+    $$$$$:  240-block 11
+    $$$$$:  240-block 12
+call   26 never executed
+    $$$$$:  240-block 13
+    $$$$$:  240-block 14
+call   27 never executed
+    $$$$$:  240-block 15
+    $$$$$:  240-block 16
+call   28 never executed
+       1*:  241:    ASSERT_EQ(array4.to_string(), "000000000000000111111101111110110");
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  241-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  241-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  241-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  241-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  241-block  6
+call   20 never executed
+call   21 never executed
+        1:  241-block  7
+        1:  241-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  241-block  9
+    $$$$$:  241-block 10
+call   25 never executed
+    $$$$$:  241-block 11
+    $$$$$:  241-block 12
+call   26 never executed
+    $$$$$:  241-block 13
+    $$$$$:  241-block 14
+call   27 never executed
+    $$$$$:  241-block 15
+    $$$$$:  241-block 16
+call   28 never executed
+       1*:  242:    ASSERT_EQ(array5.to_string(), "000000000000000000111101111110010");
+        1:  242-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  242-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  242-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  242-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  242-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  242-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  242-block  6
+call   20 never executed
+call   21 never executed
+        1:  242-block  7
+        1:  242-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  242-block  9
+    $$$$$:  242-block 10
+call   25 never executed
+    $$$$$:  242-block 11
+    $$$$$:  242-block 12
+call   26 never executed
+    $$$$$:  242-block 13
+    $$$$$:  242-block 14
+call   27 never executed
+    $$$$$:  242-block 15
+    $$$$$:  242-block 16
+call   28 never executed
+        -:  243:
+        -:  244:
+        2:  245:    BitArray array6(34, 123123);
+        1:  245-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:  245-block  1
+call    4 never executed
+        2:  246:    BitArray array7(33, 122122);
+        1:  246-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    $$$$$:  246-block  1
+call    4 never executed
+        -:  247:
+        -:  248:
+       1*:  249:    EXPECT_THROW(array3 = array6&array7, std::invalid_argument);
+        1:  249-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  249-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  249-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  249-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  249-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  249-block  5
+call   15 never executed
+        1:  249-block  6
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1
+    %%%%%:  249-block  7
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  249-block  8
+    %%%%%:  249-block  9
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  249-block 10
+call   24 never executed
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  249-block 11
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  249-block 12
+call   31 never executed
+call   32 never executed
+        1:  249-block 13
+call   33 returned 1
+    $$$$$:  249-block 14
+call   34 never executed
+        1:  249-block 15
+        1:  249-block 16
+branch 35 taken 1
+branch 36 taken 0
+branch 37 taken 0
+        1:  249-block 17
+call   38 returned 1
+call   39 returned 1
+    $$$$$:  249-block 18
+call   40 never executed
+call   41 never executed
+branch 42 never executed (fallthrough)
+branch 43 never executed (throw)
+    $$$$$:  249-block 19
+call   44 never executed
+branch 45 never executed (fallthrough)
+branch 46 never executed (throw)
+    $$$$$:  249-block 20
+call   47 never executed
+branch 48 never executed (fallthrough)
+branch 49 never executed (throw)
+    $$$$$:  249-block 21
+call   50 never executed
+call   51 never executed
+branch 52 never executed (fallthrough)
+branch 53 never executed (throw)
+    $$$$$:  249-block 22
+call   54 never executed
+call   55 never executed
+branch 56 never executed (fallthrough)
+branch 57 never executed (throw)
+    $$$$$:  249-block 23
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:  249-block 24
+    $$$$$:  249-block 25
+call   61 never executed
+    $$$$$:  249-block 26
+call   62 never executed
+call   63 never executed
+branch 64 never executed (fallthrough)
+branch 65 never executed (throw)
+    $$$$$:  249-block 27
+    $$$$$:  249-block 28
+call   66 never executed
+branch 67 never executed (fallthrough)
+branch 68 never executed (throw)
+    $$$$$:  249-block 29
+call   69 never executed
+    $$$$$:  249-block 30
+    $$$$$:  249-block 31
+call   70 never executed
+    $$$$$:  249-block 32
+call   71 never executed
+    $$$$$:  249-block 33
+call   72 never executed
+    $$$$$:  249-block 34
+    $$$$$:  249-block 35
+call   73 never executed
+    $$$$$:  249-block 36
+    $$$$$:  249-block 37
+call   74 never executed
+       1*:  250:    EXPECT_THROW(array3 = array6|array7, std::invalid_argument);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  250-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  250-block  1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  250-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  250-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  250-block  4
+call   15 never executed
+        1:  250-block  5
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1
+    %%%%%:  250-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  250-block  7
+    %%%%%:  250-block  8
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  250-block  9
+call   24 never executed
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  250-block 10
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  250-block 11
+call   31 never executed
+call   32 never executed
+        1:  250-block 12
+call   33 returned 1
+    $$$$$:  250-block 13
+call   34 never executed
+        1:  250-block 14
+        1:  250-block 15
+branch 35 taken 1
+branch 36 taken 0
+branch 37 taken 0
+        1:  250-block 16
+call   38 returned 1
+call   39 returned 1
+    $$$$$:  250-block 17
+call   40 never executed
+call   41 never executed
+branch 42 never executed (fallthrough)
+branch 43 never executed (throw)
+    $$$$$:  250-block 18
+call   44 never executed
+branch 45 never executed (fallthrough)
+branch 46 never executed (throw)
+    $$$$$:  250-block 19
+call   47 never executed
+branch 48 never executed (fallthrough)
+branch 49 never executed (throw)
+    $$$$$:  250-block 20
+call   50 never executed
+call   51 never executed
+branch 52 never executed (fallthrough)
+branch 53 never executed (throw)
+    $$$$$:  250-block 21
+call   54 never executed
+call   55 never executed
+branch 56 never executed (fallthrough)
+branch 57 never executed (throw)
+    $$$$$:  250-block 22
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:  250-block 23
+    $$$$$:  250-block 24
+call   61 never executed
+    $$$$$:  250-block 25
+call   62 never executed
+call   63 never executed
+branch 64 never executed (fallthrough)
+branch 65 never executed (throw)
+    $$$$$:  250-block 26
+    $$$$$:  250-block 27
+call   66 never executed
+branch 67 never executed (fallthrough)
+branch 68 never executed (throw)
+    $$$$$:  250-block 28
+call   69 never executed
+    $$$$$:  250-block 29
+    $$$$$:  250-block 30
+call   70 never executed
+    $$$$$:  250-block 31
+call   71 never executed
+    $$$$$:  250-block 32
+call   72 never executed
+    $$$$$:  250-block 33
+    $$$$$:  250-block 34
+call   73 never executed
+    $$$$$:  250-block 35
+    $$$$$:  250-block 36
+call   74 never executed
+       1*:  251:    EXPECT_THROW(array3 = array6^array7, std::invalid_argument);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:  251-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  251-block  1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  251-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  251-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  251-block  4
+call   15 never executed
+        1:  251-block  5
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1
+    %%%%%:  251-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:  251-block  7
+    %%%%%:  251-block  8
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:  251-block  9
+call   24 never executed
+call   25 never executed
+branch 26 never executed (fallthrough)
+branch 27 never executed (throw)
+    %%%%%:  251-block 10
+call   28 never executed
+branch 29 never executed (fallthrough)
+branch 30 never executed (throw)
+    %%%%%:  251-block 11
+call   31 never executed
+call   32 never executed
+        1:  251-block 12
+call   33 returned 1
+    $$$$$:  251-block 13
+call   34 never executed
+        1:  251-block 14
+        1:  251-block 15
+branch 35 taken 1
+branch 36 taken 0
+branch 37 taken 0
+        1:  251-block 16
+call   38 returned 1
+call   39 returned 1
+    $$$$$:  251-block 17
+call   40 never executed
+call   41 never executed
+branch 42 never executed (fallthrough)
+branch 43 never executed (throw)
+    $$$$$:  251-block 18
+call   44 never executed
+branch 45 never executed (fallthrough)
+branch 46 never executed (throw)
+    $$$$$:  251-block 19
+call   47 never executed
+branch 48 never executed (fallthrough)
+branch 49 never executed (throw)
+    $$$$$:  251-block 20
+call   50 never executed
+call   51 never executed
+branch 52 never executed (fallthrough)
+branch 53 never executed (throw)
+    $$$$$:  251-block 21
+call   54 never executed
+call   55 never executed
+branch 56 never executed (fallthrough)
+branch 57 never executed (throw)
+    $$$$$:  251-block 22
+call   58 never executed
+branch 59 never executed (fallthrough)
+branch 60 never executed (throw)
+    $$$$$:  251-block 23
+    $$$$$:  251-block 24
+call   61 never executed
+    $$$$$:  251-block 25
+call   62 never executed
+call   63 never executed
+branch 64 never executed (fallthrough)
+branch 65 never executed (throw)
+    $$$$$:  251-block 26
+    $$$$$:  251-block 27
+call   66 never executed
+branch 67 never executed (fallthrough)
+branch 68 never executed (throw)
+    $$$$$:  251-block 28
+call   69 never executed
+    $$$$$:  251-block 29
+    $$$$$:  251-block 30
+call   70 never executed
+    $$$$$:  251-block 31
+call   71 never executed
+    $$$$$:  251-block 32
+call   72 never executed
+    $$$$$:  251-block 33
+    $$$$$:  251-block 34
+call   73 never executed
+    $$$$$:  251-block 35
+    $$$$$:  251-block 36
+call   74 never executed
+        -:  252:
+        1:  253:}
+        1:  253-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  253-block  1
+        1:  253-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  253-block  3
+        1:  253-block  4
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  253-block  5
+        1:  253-block  6
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  253-block  7
+        1:  253-block  8
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:  253-block  9
+call   15 never executed
+    $$$$$:  253-block 10
+call   16 never executed
+    $$$$$:  253-block 11
+call   17 never executed
+    $$$$$:  253-block 12
+call   18 never executed
+    $$$$$:  253-block 13
+call   19 never executed
+------------------
+        -:  254:
+        -:  255:
+        4:  256:TEST(bta, shifts) {
+        1:  257:    BitArray array1(63, 123123);
+        -:  258:
+        -:  259:    //000100000000000111100000111100110000000000000000000000000000100
+        -:  260:
+        -:  261:    //001000000000001111000001111001100000000000000000000000000001000 << 1
+        -:  262:    //000011110000011110011000000000000000000000000000010000000000000 << 10
+        -:  263:    //000000000100000000000000000000000000000000000000000000000000000 << 50
+        -:  264:
+        -:  265:    //000010000000000011110000011110011000000000000000000000000000010 >> 1
+        -:  266:    //000000000000010000000000011110000011110011000000000000000000000 >> 10
+        -:  267:    //000000000000000000000000000000000000000000000000000001000000000 >> 50
+        -:  268:
+        1:  269:    array1.set(60, true);
+        1:  270:    array1.set(3, true);
+        -:  271:
+        1:  272:    BitArray array2 = array1 << 1;
+        1:  273:    BitArray array3 = array1 << 10;
+        1:  274:    BitArray array4 = array1 << 50;
+        -:  275:
+        1:  276:    BitArray array5 = array1 >> 1;
+        1:  277:    BitArray array6 = array1 >> 10;
+        1:  278:    BitArray array7 = array1 >> 50;
+        -:  279:
+       1*:  280:    ASSERT_EQ(array2.to_string(), "001000000000001111000001111001100000000000000000000000000001000");
+       1*:  281:    ASSERT_EQ(array3.to_string(), "000001111000001111001100000000000000000000000000001000000000000");
+       1*:  282:    ASSERT_EQ(array4.to_string(), "000000000010000000000000000000000000000000000000000000000000000");
+        -:  283:
+       1*:  284:    ASSERT_EQ(array5.to_string(), "000010000000000011110000011110011000000000000000000000000000010");
+       1*:  285:    ASSERT_EQ(array6.to_string(), "000000000000010000000000011110000011110011000000000000000000000");
+       1*:  286:    ASSERT_EQ(array7.to_string(), "000000000000000000000000000000000000000000000000000001000000000");
+        -:  287:
+        -:  288:
+        1:  289:    BitArray array8 = array1 << 500;
+        1:  290:    BitArray array9 = array1 >> 500;
+        -:  291:
+        -:  292:
+       1*:  293:    ASSERT_EQ(array8.count(), 0);
+       1*:  294:    ASSERT_EQ(array9.count(), 0);
+        -:  295:
+        1:  296:    BitArray array10 = array1 << 32;
+        1:  297:    BitArray array11 = array1 >> 32;
+        -:  298:
+        -:  299:
+        -:  300:    //00010000000000011110000011110011000000000000000000000000000100
+        -:  301:
+        -:  302:    //00000000000000000000000000001000000000000000000000000000000000
+        -:  303:    //00000000000000000000000000000000001000000000001111000001111001
+        -:  304:
+       1*:  305:    ASSERT_EQ(array10.to_string(), "000000000000000000000000000010000000000000000000000000000000000");
+       1*:  306:    ASSERT_EQ(array11.to_string(), "000000000000000000000000000000000001000000000001111000001111001");
+        -:  307:
+        -:  308:
+        1:  309:}
+------------------
+_ZN15bta_shifts_TestC1Ev:
+function _ZN15bta_shifts_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:  256:TEST(bta, shifts) {
+        1:  256-block  0
+call    0 returned 1
+------------------
+_ZN15bta_shifts_TestD0Ev:
+function _ZN15bta_shifts_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:  256:TEST(bta, shifts) {
+        1:  256-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN15bta_shifts_TestD1Ev:
+function _ZN15bta_shifts_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:  256:TEST(bta, shifts) {
+        1:  256-block  0
+call    0 returned 1
+------------------
+_ZN15bta_shifts_Test8TestBodyEv:
+function _ZN15bta_shifts_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:  256:TEST(bta, shifts) {
+        1:  257:    BitArray array1(63, 123123);
+        1:  257-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  258:
+        -:  259:    //000100000000000111100000111100110000000000000000000000000000100
+        -:  260:
+        -:  261:    //001000000000001111000001111001100000000000000000000000000001000 << 1
+        -:  262:    //000011110000011110011000000000000000000000000000010000000000000 << 10
+        -:  263:    //000000000100000000000000000000000000000000000000000000000000000 << 50
+        -:  264:
+        -:  265:    //000010000000000011110000011110011000000000000000000000000000010 >> 1
+        -:  266:    //000000000000010000000000011110000011110011000000000000000000000 >> 10
+        -:  267:    //000000000000000000000000000000000000000000000000000001000000000 >> 50
+        -:  268:
+        1:  269:    array1.set(60, true);
+        1:  269-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  270:    array1.set(3, true);
+        1:  270-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  271:
+        1:  272:    BitArray array2 = array1 << 1;
+        1:  272-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  273:    BitArray array3 = array1 << 10;
+        1:  273-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  274:    BitArray array4 = array1 << 50;
+        1:  274-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  275:
+        1:  276:    BitArray array5 = array1 >> 1;
+        1:  276-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  277:    BitArray array6 = array1 >> 10;
+        1:  277-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  278:    BitArray array7 = array1 >> 50;
+        1:  278-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  279:
+       1*:  280:    ASSERT_EQ(array2.to_string(), "001000000000001111000001111001100000000000000000000000000001000");
+        1:  280-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  280-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  280-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  280-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  280-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  280-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  280-block  6
+call   20 never executed
+call   21 never executed
+        1:  280-block  7
+        1:  280-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  280-block  9
+    $$$$$:  280-block 10
+call   25 never executed
+    $$$$$:  280-block 11
+    $$$$$:  280-block 12
+call   26 never executed
+    $$$$$:  280-block 13
+    $$$$$:  280-block 14
+call   27 never executed
+    $$$$$:  280-block 15
+    $$$$$:  280-block 16
+call   28 never executed
+       1*:  281:    ASSERT_EQ(array3.to_string(), "000001111000001111001100000000000000000000000000001000000000000");
+        1:  281-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  281-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  281-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  281-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  281-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  281-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  281-block  6
+call   20 never executed
+call   21 never executed
+        1:  281-block  7
+        1:  281-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  281-block  9
+    $$$$$:  281-block 10
+call   25 never executed
+    $$$$$:  281-block 11
+    $$$$$:  281-block 12
+call   26 never executed
+    $$$$$:  281-block 13
+    $$$$$:  281-block 14
+call   27 never executed
+    $$$$$:  281-block 15
+    $$$$$:  281-block 16
+call   28 never executed
+       1*:  282:    ASSERT_EQ(array4.to_string(), "000000000010000000000000000000000000000000000000000000000000000");
+        1:  282-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  282-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  282-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  282-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  282-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  282-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  282-block  6
+call   20 never executed
+call   21 never executed
+        1:  282-block  7
+        1:  282-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  282-block  9
+    $$$$$:  282-block 10
+call   25 never executed
+    $$$$$:  282-block 11
+    $$$$$:  282-block 12
+call   26 never executed
+    $$$$$:  282-block 13
+    $$$$$:  282-block 14
+call   27 never executed
+    $$$$$:  282-block 15
+    $$$$$:  282-block 16
+call   28 never executed
+        -:  283:
+       1*:  284:    ASSERT_EQ(array5.to_string(), "000010000000000011110000011110011000000000000000000000000000010");
+        1:  284-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  284-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  284-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  284-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  284-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  284-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  284-block  6
+call   20 never executed
+call   21 never executed
+        1:  284-block  7
+        1:  284-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  284-block  9
+    $$$$$:  284-block 10
+call   25 never executed
+    $$$$$:  284-block 11
+    $$$$$:  284-block 12
+call   26 never executed
+    $$$$$:  284-block 13
+    $$$$$:  284-block 14
+call   27 never executed
+    $$$$$:  284-block 15
+    $$$$$:  284-block 16
+call   28 never executed
+       1*:  285:    ASSERT_EQ(array6.to_string(), "000000000000010000000000011110000011110011000000000000000000000");
+        1:  285-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  285-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  285-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  285-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  285-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  285-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  285-block  6
+call   20 never executed
+call   21 never executed
+        1:  285-block  7
+        1:  285-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  285-block  9
+    $$$$$:  285-block 10
+call   25 never executed
+    $$$$$:  285-block 11
+    $$$$$:  285-block 12
+call   26 never executed
+    $$$$$:  285-block 13
+    $$$$$:  285-block 14
+call   27 never executed
+    $$$$$:  285-block 15
+    $$$$$:  285-block 16
+call   28 never executed
+       1*:  286:    ASSERT_EQ(array7.to_string(), "000000000000000000000000000000000000000000000000000001000000000");
+        1:  286-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  286-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  286-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  286-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  286-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  286-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  286-block  6
+call   20 never executed
+call   21 never executed
+        1:  286-block  7
+        1:  286-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  286-block  9
+    $$$$$:  286-block 10
+call   25 never executed
+    $$$$$:  286-block 11
+    $$$$$:  286-block 12
+call   26 never executed
+    $$$$$:  286-block 13
+    $$$$$:  286-block 14
+call   27 never executed
+    $$$$$:  286-block 15
+    $$$$$:  286-block 16
+call   28 never executed
+        -:  287:
+        -:  288:
+        1:  289:    BitArray array8 = array1 << 500;
+        1:  289-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  289-block  1
+call    3 never executed
+        1:  290:    BitArray array9 = array1 >> 500;
+        1:  290-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  290-block  1
+call    3 never executed
+        -:  291:
+        -:  292:
+       1*:  293:    ASSERT_EQ(array8.count(), 0);
+        1:  293-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  293-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  293-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  293-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  293-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  293-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  293-block  6
+call   19 never executed
+call   20 never executed
+        1:  293-block  7
+        1:  293-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  293-block  9
+    $$$$$:  293-block 10
+    $$$$$:  293-block 11
+    $$$$$:  293-block 12
+call   24 never executed
+    $$$$$:  293-block 13
+    $$$$$:  293-block 14
+call   25 never executed
+    $$$$$:  293-block 15
+    $$$$$:  293-block 16
+call   26 never executed
+       1*:  294:    ASSERT_EQ(array9.count(), 0);
+        1:  294-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  294-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  294-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  294-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  294-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:  294-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:  294-block  6
+call   19 never executed
+call   20 never executed
+        1:  294-block  7
+        1:  294-block  8
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  294-block  9
+    $$$$$:  294-block 10
+    $$$$$:  294-block 11
+    $$$$$:  294-block 12
+call   24 never executed
+    $$$$$:  294-block 13
+    $$$$$:  294-block 14
+call   25 never executed
+    $$$$$:  294-block 15
+    $$$$$:  294-block 16
+call   26 never executed
+        -:  295:
+        1:  296:    BitArray array10 = array1 << 32;
+        1:  296-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  296-block  1
+call    3 never executed
+        1:  297:    BitArray array11 = array1 >> 32;
+        1:  297-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  297-block  1
+call    3 never executed
+        -:  298:
+        -:  299:
+        -:  300:    //00010000000000011110000011110011000000000000000000000000000100
+        -:  301:
+        -:  302:    //00000000000000000000000000001000000000000000000000000000000000
+        -:  303:    //00000000000000000000000000000000001000000000001111000001111001
+        -:  304:
+       1*:  305:    ASSERT_EQ(array10.to_string(), "000000000000000000000000000010000000000000000000000000000000000");
+        1:  305-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  305-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  305-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  305-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  305-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  305-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  305-block  6
+call   20 never executed
+call   21 never executed
+        1:  305-block  7
+        1:  305-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  305-block  9
+    $$$$$:  305-block 10
+call   25 never executed
+    $$$$$:  305-block 11
+    $$$$$:  305-block 12
+call   26 never executed
+    $$$$$:  305-block 13
+    $$$$$:  305-block 14
+call   27 never executed
+    $$$$$:  305-block 15
+    $$$$$:  305-block 16
+call   28 never executed
+       1*:  306:    ASSERT_EQ(array11.to_string(), "000000000000000000000000000000000001000000000001111000001111001");
+        1:  306-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  306-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  306-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  306-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:  306-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  306-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:  306-block  6
+call   20 never executed
+call   21 never executed
+        1:  306-block  7
+        1:  306-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:  306-block  9
+    $$$$$:  306-block 10
+call   25 never executed
+    $$$$$:  306-block 11
+    $$$$$:  306-block 12
+call   26 never executed
+    $$$$$:  306-block 13
+    $$$$$:  306-block 14
+call   27 never executed
+    $$$$$:  306-block 15
+    $$$$$:  306-block 16
+call   28 never executed
+        -:  307:
+        -:  308:
+        1:  309:}
+        1:  309-block  0
+        1:  309-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  309-block  2
+        1:  309-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  309-block  4
+        1:  309-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  309-block  6
+        1:  309-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  309-block  8
+        1:  309-block  9
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  309-block 10
+        1:  309-block 11
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  309-block 12
+        1:  309-block 13
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+    $$$$$:  309-block 14
+call   21 never executed
+    $$$$$:  309-block 15
+call   22 never executed
+    $$$$$:  309-block 16
+call   23 never executed
+    $$$$$:  309-block 17
+call   24 never executed
+    $$$$$:  309-block 18
+call   25 never executed
+    $$$$$:  309-block 19
+call   26 never executed
+    $$$$$:  309-block 20
+call   27 never executed
+------------------

@@ -1,0 +1,19 @@
+# ninja log v5
+897	1003	7500649795295881	src/lab1_run.exe	6145b569e2245ee2
+2	565	7500649790946112	src/CMakeFiles/lab1_run.dir/main.cpp.obj	cfba6f5cdf49294a
+6	897	7500649794248822	src/CMakeFiles/lab1_run.dir/BitArray.cpp.obj	84916a36c92106bf
+4	1722	7500649883761724	src/CMakeFiles/lab1_lib.dir/main.cpp.obj	f925535868ef622b
+3	822	7500664547536240	src/CMakeFiles/lab1_lib.dir/BitArray.cpp.obj	e3e939c3569e3ea8
+4	2188	7500650424456037	test/CMakeFiles/lab1_tst.dir/BitArrayTest.cpp.obj	e17c53dcd0982206
+12	1963	7498209238646842	test/CMakeFiles/lab1_tst.dir/main.cpp.obj	abb5baa9011caa63
+822	904	7500664548364437	src/liblab1_lib.a	5dff30941cdeaf9e
+15	13401	7498487702609307	lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	210344e7ae0d0a4
+13401	18884	7498487757648380	lib/libgtest.a	23cec8882b67b2d0
+905	6048	7500664599728822	test/lab1_tst.exe	def80fa35ba8060e
+1	539	7513047618328202	build.ninja	ef7757720f8f1b03
+2	360	7513047618328202	build.ninja	ef7757720f8f1b03
+4	625	7513047626067519	src/CMakeFiles/lab1_lib.dir/main.cpp.obj	f925535868ef622b
+7	1037	7513047630186488	src/CMakeFiles/lab1_lib.dir/BitArray.cpp.obj	e3e939c3569e3ea8
+1037	1572	7513047635552154	src/liblab1_lib.a	5dff30941cdeaf9e
+11	2451	7513047644296436	test/CMakeFiles/lab1_tst.dir/BitArrayTest.cpp.obj	e17c53dcd0982206
+2451	8022	7513047699983970	test/lab1_tst.exe	def80fa35ba8060e

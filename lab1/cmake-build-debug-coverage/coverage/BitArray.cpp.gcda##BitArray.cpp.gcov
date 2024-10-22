@@ -1,0 +1,789 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab1/src/BitArray.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab1\cmake-build-debug-coverage\src\CMakeFiles\lab1_lib.dir\BitArray.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab1\cmake-build-debug-coverage\src\CMakeFiles\lab1_lib.dir\BitArray.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <math.h>
+        -:    3:#include "BitArray.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+function _ZN8BitArrayC2Ev called 1 returned 100% blocks executed 100%
+        1:    8:BitArray::BitArray() {
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    size=0;
+        1:   10:}
+        -:   11:
+function _ZN8BitArrayD2Ev called 47 returned 100% blocks executed 100%
+       47:   12:BitArray::~BitArray() = default;
+       47:   12-block  0
+call    0 returned 47
+        -:   13:
+function _ZN8BitArrayC2Eim called 25 returned 100% blocks executed 89%
+       25:   14:BitArray::BitArray(int num_bits, unsigned long value) {
+       25:   14-block  0
+call    0 returned 25
+       25:   15:    size = num_bits;
+       25:   16:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+call    0 returned 25
+       25:   17:    massive.resize(count_of_blocks);
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:   18:    if (size!=0) {
+       25:   18-block  0
+branch  0 taken 23 (fallthrough)
+branch  1 taken 2
+       23:   19:        massive[0]=value;
+       23:   19-block  0
+call    0 returned 23
+        -:   20:    }
+       25:   21:}
+       25:   21-block  0
+    $$$$$:   21-block  1
+call    0 never executed
+        -:   22:
+function _ZN8BitArrayC2ERKS_ called 21 returned 100% blocks executed 80%
+       21:   23:BitArray::BitArray(const BitArray& b){
+       21:   23-block  0
+call    0 returned 21
+       21:   24:    *this = b;
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0 (throw)
+       21:   25:}
+       21:   25-block  0
+    $$$$$:   25-block  1
+call    0 never executed
+        -:   26:
+function _ZN8BitArray6resizeEib called 5 returned 100% blocks executed 100%
+        5:   27:void BitArray::resize(int num_bits, bool value){ //доделать
+        5:   28:    int last_size = size;
+        5:   29:    int count_of_blocks_last = ceil((float) size / (sizeof(int) * 8));
+        5:   29-block  0
+call    0 returned 5
+        5:   30:    size = num_bits;
+        5:   31:    int count_of_blocks_new = ceil((float) size / (sizeof(int) * 8));
+call    0 returned 5
+        5:   32:    massive.resize(count_of_blocks_new);
+call    0 returned 5
+        5:   33:    if (num_bits>last_size) {
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
+        3:   34:        unsigned int mask=0;
+        3:   35:        if (value) {
+        3:   35-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   36:            mask=0xFFFFFFFF;
+        2:   36-block  0
+        -:   37:        }
+        -:   38:        //ставлю блоки
+        5:   39:        for (int i=count_of_blocks_last; i!=count_of_blocks_new; i++) {
+        3:   39-block  0
+        5:   39-block  1
+branch  0 taken 2
+branch  1 taken 3 (fallthrough)
+        2:   40:            massive[i] = mask;
+        2:   40-block  0
+call    0 returned 2
+        -:   41:        }
+        -:   42:        //ставлю оставшиеся биты
+       34:   43:        for (int i=last_size; i%(sizeof(int)*8)!=0; i++) {
+        3:   43-block  0
+       34:   43-block  1
+branch  0 taken 31
+branch  1 taken 3 (fallthrough)
+       31:   44:            set(i, value);
+       31:   44-block  0
+call    0 returned 31
+        -:   45:        }
+        -:   46:    }
+        5:   47:}
+        -:   48:
+function _ZN8BitArray5clearEv called 4 returned 100% blocks executed 100%
+        4:   49:void BitArray::clear() {
+      634:   50:    for (int i=0; i!=(int)ceil((float) size / (sizeof(int) * 8)); i++) {
+        4:   50-block  0
+      634:   50-block  1
+call    0 returned 634
+branch  1 taken 630
+branch  2 taken 4 (fallthrough)
+      630:   51:        massive[i] = 0;
+      630:   51-block  0
+call    0 returned 630
+        -:   52:    }
+        4:   53:}
+        -:   54:
+function _ZN8BitArray4swapERS_ called 2 returned 100% blocks executed 75%
+        2:   55:void BitArray::swap(BitArray& b) {
+        2:   56:    BitArray temp_array(b);
+        2:   56-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   57:    b = (*this);
+        2:   57-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   58:    (*this) = temp_array;
+        2:   58-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   59:}
+        2:   59-block  0
+call    0 returned 2
+    $$$$$:   59-block  1
+call    1 never executed
+        -:   60:
+        -:   61:
+function _ZN8BitArrayaSERKS_ called 28 returned 100% blocks executed 100%
+       28:   62:BitArray& BitArray::operator=(const BitArray& b) = default;
+       28:   62-block  0
+call    0 returned 28
+        -:   63:
+function _ZN8BitArrayaNERKS_ called 2 returned 50% blocks executed 93%
+        2:   64:BitArray& BitArray::operator&=(const BitArray& b) {
+        2:   65:    if(size != b.size) {
+        2:   65-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   66:        throw invalid_argument("The sizes of the bit arrays do not match");
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   66-block  1
+call    4 returned 0
+    $$$$$:   66-block  2
+call    5 never executed
+        -:   67:    }
+        3:   68:    for (int i=0; i!=(int)ceil((float) size / (sizeof(int) * 8)); i++) {
+        1:   68-block  0
+        3:   68-block  1
+call    0 returned 3
+branch  1 taken 2
+branch  2 taken 1 (fallthrough)
+        2:   69:        massive[i] &= b.massive[i];
+        2:   69-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   70:    }
+        1:   71:    return (*this);
+        1:   71-block  0
+        1:   71-block  1
+        -:   72:}
+        -:   73:
+function _ZN8BitArrayoRERKS_ called 2 returned 50% blocks executed 93%
+        2:   74:BitArray& BitArray::operator|=(const BitArray& b) {
+        2:   75:    if(size != b.size) {
+        2:   75-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   76:        throw invalid_argument("The sizes of the bit arrays do not match");
+        1:   76-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   76-block  1
+call    4 returned 0
+    $$$$$:   76-block  2
+call    5 never executed
+        -:   77:    }
+        3:   78:    for (int i=0; i!=(int)ceil((float) size / (sizeof(int) * 8)); i++) {
+        1:   78-block  0
+        3:   78-block  1
+call    0 returned 3
+branch  1 taken 2
+branch  2 taken 1 (fallthrough)
+        2:   79:        massive[i] |= b.massive[i];
+        2:   79-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   80:    }
+        1:   81:    return (*this);
+        1:   81-block  0
+        1:   81-block  1
+        -:   82:}
+        -:   83:
+function _ZN8BitArrayeOERKS_ called 2 returned 50% blocks executed 93%
+        2:   84:BitArray& BitArray::operator^=(const BitArray& b) {
+        2:   85:    if(size != b.size) {
+        2:   85-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   86:        throw invalid_argument("The sizes of the bit arrays do not match");
+        1:   86-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   86-block  1
+call    4 returned 0
+    $$$$$:   86-block  2
+call    5 never executed
+        -:   87:    }
+        3:   88:    for (int i=0; i!=(int)ceil((float) size / (sizeof(int) * 8)); i++) {
+        1:   88-block  0
+        3:   88-block  1
+call    0 returned 3
+branch  1 taken 2
+branch  2 taken 1 (fallthrough)
+        2:   89:        massive[i] ^= b.massive[i];
+        2:   89-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   90:    }
+        1:   91:    return (*this);
+        1:   91-block  0
+        1:   91-block  1
+        -:   92:}
+        -:   93:
+function _ZN8BitArraylSEi called 5 returned 100% blocks executed 100%
+        5:   94:BitArray& BitArray::operator<<=(int n) {
+        -:   95:    // проверка на чрезмерный сдвиг
+        5:   96:    if (n>=size) {
+        5:   96-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:   97:        clear();
+        1:   97-block  0
+call    0 returned 1
+        1:   98:        return (*this);
+        -:   99:    }
+        -:  100:
+        -:  101:    // сдвиг блоков
+        4:  102:    int blocks_shift = n/32;
+        4:  103:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        4:  103-block  0
+call    0 returned 4
+       10:  104:    for (int i=0; i!=(count_of_blocks-blocks_shift); i++) {
+       10:  104-block  0
+branch  0 taken 6
+branch  1 taken 4 (fallthrough)
+        6:  105:        massive[i] = massive[i+blocks_shift];
+        6:  105-block  0
+call    0 returned 6
+call    1 returned 6
+        -:  106:    }
+        -:  107:
+        -:  108:    //зануление крайних блоков
+        6:  109:    for (int i=(count_of_blocks-blocks_shift); i!=count_of_blocks; i++) {
+        4:  109-block  0
+        6:  109-block  1
+branch  0 taken 2
+branch  1 taken 4 (fallthrough)
+        2:  110:        massive[i] = 0;
+        2:  110-block  0
+call    0 returned 2
+        -:  111:    }
+        -:  112:
+        -:  113:    //проверка на завершение сдвига
+        4:  114:    if (n%32==0) {
+        4:  114-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  115:        return (*this);
+        1:  115-block  0
+        -:  116:    }
+        -:  117:
+        -:  118:    //сдвиг оставшихся битов
+        -:  119:    unsigned int our_mask;
+        -:  120:    unsigned int bits;
+        3:  121:    massive[0]<<=(n%32);
+        3:  121-block  0
+call    0 returned 3
+        6:  122:    for (int i=0; i!=count_of_blocks-1; i++) {
+        6:  122-block  0
+branch  0 taken 3
+branch  1 taken 3 (fallthrough)
+        3:  123:        our_mask=0|(~((1<<(32-(n%32)))-1));
+        3:  124:        bits = (massive[i+1]&our_mask)>>(32-(n%32));
+        3:  124-block  0
+call    0 returned 3
+        3:  125:        massive[i] |= bits;
+call    0 returned 3
+        3:  126:        massive[i+1]<<=(n%32);
+call    0 returned 3
+        -:  127:    }
+        3:  128:    return (*this);
+        3:  128-block  0
+        -:  129:}
+        -:  130:
+function _ZN8BitArrayrSEi called 5 returned 100% blocks executed 100%
+        5:  131:BitArray& BitArray::operator>>=(int n) {
+        -:  132:    // проверка на чрезмерный сдвиг
+        5:  133:    if (n>=size) {
+        5:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:  134:        clear();
+        1:  134-block  0
+call    0 returned 1
+        1:  135:        return (*this);
+        -:  136:    }
+        -:  137:
+        -:  138:    // сдвиг блоков
+        4:  139:    int four_bytes_shift = n/32;
+        4:  140:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        4:  140-block  0
+call    0 returned 4
+       10:  141:    for (int i=(count_of_blocks-1); i!=four_bytes_shift-1; i--) {
+       10:  141-block  0
+branch  0 taken 6
+branch  1 taken 4 (fallthrough)
+        6:  142:        massive[i] = massive[i-four_bytes_shift];
+        6:  142-block  0
+call    0 returned 6
+call    1 returned 6
+        -:  143:    }
+        -:  144:
+        -:  145:    //зануление крайних блоков
+        6:  146:    for (int i=(four_bytes_shift-1); i!=-1; i--) {
+        4:  146-block  0
+        6:  146-block  1
+branch  0 taken 2
+branch  1 taken 4 (fallthrough)
+        2:  147:        massive[i] = 0;
+        2:  147-block  0
+call    0 returned 2
+        -:  148:    }
+        -:  149:
+        -:  150:    //проверка на завершение сдвига
+        4:  151:    if (n%32==0) {
+        4:  151-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  152:        return (*this);
+        1:  152-block  0
+        -:  153:    }
+        -:  154:
+        -:  155:    //сдвиг оставшихся битов
+        -:  156:    unsigned int our_mask;
+        -:  157:    unsigned int bits;
+        3:  158:    massive[count_of_blocks-1]>>=(n%32);
+        3:  158-block  0
+call    0 returned 3
+        6:  159:    for (int i=(count_of_blocks-1); i!=0; i--) {
+        6:  159-block  0
+branch  0 taken 3
+branch  1 taken 3 (fallthrough)
+        3:  160:        our_mask=0|((1<<(n%32))-1);
+        3:  161:        bits = (massive[i-1]&our_mask)<<(32-(n%32));
+        3:  161-block  0
+call    0 returned 3
+        3:  162:        massive[i] |= bits;
+call    0 returned 3
+        3:  163:        massive[i-1]>>=(n%32);
+call    0 returned 3
+        -:  164:    }
+        3:  165:    return (*this);
+        3:  165-block  0
+        -:  166:}
+        -:  167:
+function _ZNK8BitArraylsEi called 5 returned 100% blocks executed 100%
+        5:  168:BitArray BitArray::operator<<(int n) const {
+        5:  169:    BitArray temp(*this);
+        5:  169-block  0
+call    0 returned 5
+        5:  170:    temp <<= n;
+call    0 returned 5
+        5:  171:    return temp;
+        -:  172:}
+        -:  173:
+function _ZNK8BitArrayrsEi called 5 returned 100% blocks executed 100%
+        5:  174:BitArray BitArray::operator>>(int n) const {
+        5:  175:    BitArray temp(*this);
+        5:  175-block  0
+call    0 returned 5
+        5:  176:    temp >>= n;
+call    0 returned 5
+        5:  177:    return temp;
+        -:  178:}
+        -:  179:
+function _ZN8BitArray3setEib called 44 returned 100% blocks executed 100%
+       44:  180:BitArray& BitArray::set(int n, bool val) {
+       44:  181:    int block = n/(sizeof(int)*8), pos_in_block = ((sizeof(int)*8-1)-n)%(sizeof(int)*8);
+       44:  182:    if (val) {
+       44:  182-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 38
+        6:  183:        massive[block] = massive[block] | (1 << pos_in_block);
+        6:  183-block  0
+call    0 returned 6
+call    1 returned 6
+        -:  184:    }
+        -:  185:    else {
+       38:  186:        massive[block] = massive[block]&(~(1 << pos_in_block));
+       38:  186-block  0
+call    0 returned 38
+call    1 returned 38
+        -:  187:    }
+       44:  188:    return (*this);
+       44:  188-block  0
+        -:  189:}
+        -:  190:
+function _ZN8BitArray3setEv called 3 returned 100% blocks executed 100%
+        3:  191:BitArray& BitArray::set() {
+        3:  192:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        3:  192-block  0
+call    0 returned 3
+        3:  193:    unsigned int mask=0xFFFFFFFF;
+      320:  194:    for (int i=0; i!=count_of_blocks; i++) {
+      320:  194-block  0
+branch  0 taken 317
+branch  1 taken 3 (fallthrough)
+      317:  195:        massive[i] = mask;
+      317:  195-block  0
+call    0 returned 317
+        -:  196:    }
+        3:  197:    return (*this);
+        3:  197-block  0
+        -:  198:}
+        -:  199:
+function _ZN8BitArray5resetEi called 2 returned 100% blocks executed 100%
+        2:  200:BitArray& BitArray::reset(int n) {
+        2:  201:    set(n, false);
+        2:  201-block  0
+call    0 returned 2
+        2:  202:    return (*this);
+        -:  203:}
+        -:  204:
+function _ZN8BitArray5resetEv called 3 returned 100% blocks executed 100%
+        3:  205:BitArray& BitArray::reset() {
+        3:  206:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        3:  206-block  0
+call    0 returned 3
+        3:  207:    int mask=0;
+        9:  208:    for (int i=0; i!=count_of_blocks; i++) {
+        9:  208-block  0
+branch  0 taken 6
+branch  1 taken 3 (fallthrough)
+        6:  209:        massive[i] = mask;
+        6:  209-block  0
+call    0 returned 6
+        -:  210:    }
+        3:  211:    return (*this);
+        3:  211-block  0
+        -:  212:}
+        -:  213:
+function _ZNK8BitArray3anyEv called 6 returned 100% blocks executed 100%
+        6:  214:bool BitArray::any() const {
+        6:  215:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        6:  215-block  0
+call    0 returned 6
+       10:  216:    for (int i=0; i!=count_of_blocks; i++) {
+        4:  216-block  0
+       10:  216-block  1
+branch  0 taken 8
+branch  1 taken 2 (fallthrough)
+        8:  217:        if (massive[i]!=0) {
+        8:  217-block  0
+call    0 returned 8
+branch  1 taken 4 (fallthrough)
+branch  2 taken 4
+        4:  218:            return true;
+        4:  218-block  0
+        -:  219:        }
+        -:  220:    }
+        2:  221:    return false;
+        2:  221-block  0
+        -:  222:}
+        -:  223:
+function _ZNK8BitArray4noneEv called 6 returned 100% blocks executed 100%
+        6:  224:bool BitArray::none() const {
+        6:  225:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        6:  225-block  0
+call    0 returned 6
+       10:  226:    for (int i=0; i!=count_of_blocks; i++) {
+        4:  226-block  0
+       10:  226-block  1
+branch  0 taken 8
+branch  1 taken 2 (fallthrough)
+        8:  227:        if (massive[i]!=0) {
+        8:  227-block  0
+call    0 returned 8
+branch  1 taken 4 (fallthrough)
+branch  2 taken 4
+        4:  228:            return false;
+        4:  228-block  0
+        -:  229:        }
+        -:  230:    }
+        2:  231:    return true;
+        2:  231-block  0
+        -:  232:}
+        -:  233:
+function _ZNK8BitArraycoEv called 1 returned 100% blocks executed 100%
+        1:  234:BitArray BitArray::operator~() const {
+        1:  235:    BitArray temp_array((*this));
+        1:  235-block  0
+call    0 returned 1
+        1:  236:    int count_of_blocks = ceil((float) temp_array.size / (sizeof(int) * 8));
+call    0 returned 1
+        3:  237:    for (int i=0; i!=count_of_blocks; i++) {
+        3:  237-block  0
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:  238:        temp_array.massive[i] = ~temp_array.massive[i];
+        2:  238-block  0
+call    0 returned 2
+call    1 returned 2
+        -:  239:    }
+        1:  240:    return temp_array;
+        1:  240-block  0
+        -:  241:}
+        -:  242:
+function _ZNK8BitArray5countEv called 8 returned 100% blocks executed 100%
+        8:  243:int BitArray::count() const {
+        8:  244:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8)), count_bits = 0, temp;
+        8:  244-block  0
+call    0 returned 8
+        8:  245:    int limit = size;
+      637:  246:    for (int i=0; i!=count_of_blocks; i++) {
+      629:  246-block  0
+      637:  246-block  1
+branch  0 taken 635
+branch  1 taken 2 (fallthrough)
+      635:  247:        temp = massive[i];
+      635:  247-block  0
+call    0 returned 635
+    20919:  248:        for (int v=0; v!=(sizeof(int)*8); v++) {
+    20919:  248-block  0
+branch  0 taken 20290
+branch  1 taken 629 (fallthrough)
+    20290:  249:            if (limit==0) {
+    20290:  249-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 20284
+        6:  250:                return count_bits;
+        6:  250-block  0
+        -:  251:            }
+    20284:  252:            if ((temp & (1<<31))!=0) {
+    20284:  252-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 20273
+       11:  253:                count_bits++;
+       11:  253-block  0
+        -:  254:            }
+    20284:  255:            temp <<= 1;
+    20284:  256:            limit--;
+    20284:  256-block  0
+        -:  257:        }
+        -:  258:    }
+        2:  259:    return count_bits;
+        2:  259-block  0
+        -:  260:}
+        -:  261:
+        -:  262:
+function _ZNK8BitArrayixEi called 11471 returned 100% blocks executed 91%
+    11471:  263:bool BitArray::operator[](int i) const {
+    11471:  264:    if (i>=size) {
+    11471:  264-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 11470
+        1:  265:        throw std::out_of_range("Out of range");
+        1:  265-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  265-block  1
+call    4 returned 0
+    $$$$$:  265-block  2
+call    5 never executed
+        -:  266:    }
+    11470:  267:    int block = i/(sizeof(int)*8), pos_in_block = ((sizeof(int)*8-1)-i)%(sizeof(int)*8);
+    11470:  268:    if ((massive[block] & (1 << pos_in_block))==0) {
+    11470:  268-block  0
+call    0 returned 11470
+branch  1 taken 11428 (fallthrough)
+branch  2 taken 42
+    11428:  269:        return false;
+    11428:  269-block  0
+        -:  270:    }
+        -:  271:    else {
+       42:  272:        return true;
+       42:  272-block  0
+        -:  273:    }
+        -:  274:}
+        -:  275:
+        -:  276:
+function _ZNK8BitArray10size_arrayEv called 5768 returned 100% blocks executed 100%
+     5768:  277:int BitArray::size_array() const {
+     5768:  278:    return size;
+     5768:  278-block  0
+        -:  279:}
+        -:  280:
+function _ZNK8BitArray5emptyEv called 2 returned 100% blocks executed 100%
+        2:  281:bool BitArray::empty() const {
+        2:  282:    if (size==0) {
+        2:  282-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  283:        return true;
+        1:  283-block  0
+        -:  284:    }
+        1:  285:    return false;
+        1:  285-block  0
+        -:  286:}
+        -:  287:
+function _ZNK8BitArray9to_stringB5cxx11Ev called 27 returned 100% blocks executed 94%
+       27:  288:string BitArray::to_string() const {
+       27:  289:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8)), temp;
+       27:  289-block  0
+call    0 returned 27
+       27:  290:    string string_with_bits;
+call    0 returned 27
+       27:  291:    int limit = size;
+       51:  292:    for (int i=0; i!=count_of_blocks; i++) {
+       24:  292-block  0
+       51:  292-block  1
+branch  0 taken 50
+branch  1 taken 1 (fallthrough)
+       50:  293:        temp = massive[i];
+       50:  293-block  0
+call    0 returned 50
+     1154:  294:        for (int v=0; v!=32; v++) {
+     1154:  294-block  0
+branch  0 taken 1130
+branch  1 taken 24 (fallthrough)
+     1130:  295:            if (limit==0) {
+     1130:  295-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 1104
+       26:  296:                return string_with_bits;
+       26:  296-block  0
+        -:  297:            }
+     1104:  298:            if ((temp & (1<<31))!=0) {
+     1104:  298-block  0
+branch  0 taken 278 (fallthrough)
+branch  1 taken 826
+      278:  299:                string_with_bits += '1';
+      278:  299-block  0
+call    0 returned 278
+branch  1 taken 278 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  300:            }
+        -:  301:            else {
+      826:  302:                string_with_bits += '0';
+      826:  302-block  0
+call    0 returned 826
+branch  1 taken 826 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  303:            }
+     1104:  304:            limit--;
+     1104:  305:            temp <<= 1;
+     1104:  305-block  0
+        -:  306:        }
+        -:  307:    }
+        1:  308:    return string_with_bits;    }
+        1:  308-block  0
+    $$$$$:  308-block  1
+call    0 never executed
+        -:  309:
+        -:  310:
+function _ZN8BitArray9push_backEb called 3 returned 100% blocks executed 100%
+        3:  311:void BitArray::push_back(bool bit) {
+        3:  312:    size += 1;
+        3:  313:    int count_of_blocks = ceil((float) size / (sizeof(int) * 8));
+        3:  313-block  0
+call    0 returned 3
+        3:  314:    massive.resize(count_of_blocks);
+call    0 returned 3
+        3:  315:    set(size-1, bit);
+call    0 returned 3
+        3:  316:}
+        -:  317:
+function _ZeqRK8BitArrayS1_ called 11 returned 100% blocks executed 100%
+       11:  318:bool operator==(const BitArray &a, const BitArray &b) {
+       11:  319:    if(a.size_array() != b.size_array()) {
+       11:  319-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 5 (fallthrough)
+branch  3 taken 6
+        5:  320:        return false;
+        5:  320-block  0
+        -:  321:    }
+     5739:  322:    for (int i=0; i!=a.size_array(); i++) {
+        6:  322-block  0
+     5733:  322-block  1
+     5739:  322-block  2
+call    0 returned 5739
+branch  1 taken 5734
+branch  2 taken 5 (fallthrough)
+     5734:  323:        if (a[i]!=b[i]) {
+     5734:  323-block  0
+call    0 returned 5734
+call    1 returned 5734
+branch  2 taken 1 (fallthrough)
+branch  3 taken 5733
+        1:  324:            return false;
+        1:  324-block  0
+        -:  325:        }
+        -:  326:    }
+        5:  327:    return true;
+        5:  327-block  0
+        -:  328:}
+        -:  329:
+        -:  330:
+function _ZneRK8BitArrayS1_ called 3 returned 100% blocks executed 100%
+        3:  331:bool operator!=(const BitArray &a, const BitArray &b) {
+        3:  332:    return !(a==b);
+        3:  332-block  0
+call    0 returned 3
+        -:  333:}
+        -:  334:
+function _ZanRK8BitArrayS1_ called 2 returned 50% blocks executed 100%
+        2:  335:BitArray operator&(const BitArray& a, const BitArray& b) {
+        2:  336:    BitArray temp(a);
+        2:  336-block  0
+call    0 returned 2
+        2:  337:    temp &= b;
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  338:    return temp;
+        1:  338-block  0
+        1:  338-block  1
+        1:  339:}
+        1:  339-block  0
+call    0 returned 1
+        -:  340:
+function _ZorRK8BitArrayS1_ called 2 returned 50% blocks executed 100%
+        2:  341:BitArray operator|(const BitArray& a, const BitArray& b) {
+        2:  342:    BitArray temp(a);
+        2:  342-block  0
+call    0 returned 2
+        2:  343:    temp |= b;
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  344:    return temp;
+        1:  344-block  0
+        1:  344-block  1
+        1:  345:}
+        1:  345-block  0
+call    0 returned 1
+        -:  346:
+function _ZeoRK8BitArrayS1_ called 2 returned 50% blocks executed 100%
+        2:  347:BitArray operator^(const BitArray& a, const BitArray& b) {
+        2:  348:    BitArray temp(a);
+        2:  348-block  0
+call    0 returned 2
+        2:  349:    temp ^= b;
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  350:    return temp;
+        1:  350-block  0
+        1:  350-block  1
+        1:  351:}
+        1:  351-block  0
+call    0 returned 1
