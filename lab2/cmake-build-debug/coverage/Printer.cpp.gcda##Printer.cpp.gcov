@@ -1,0 +1,417 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab2/src/Printer.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Printer.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Printer.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "iostream"
+        -:    2:#include "Printer.h"
+        -:    3:#include <utility>
+        -:    4:#include "Static.h"
+        -:    5:
+        -:    6:
+        -:    7:namespace LifeGame {
+function _ZN8LifeGame7PrinterC2ERNS_5FieldE called 1 returned 100% blocks executed 50%
+        9:    8:    Printer::Printer(Field &printer_field_new):printer_field(printer_field_new), is_printing(false) {
+        1:    8-block  0
+call    0 returned 1
+        1:    8-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    8-block  2
+        1:    8-block  3
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    8-block  4
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:    8-block  5
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:    8-block  6
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:    8-block  7
+call   16 returned 1
+        1:    8-block  8
+call   17 returned 1
+        1:    8-block  9
+call   18 returned 1
+        1:    8-block 10
+call   19 returned 1
+        1:    8-block 11
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+    $$$$$:    8-block 12
+call   23 never executed
+    $$$$$:    8-block 13
+    $$$$$:    8-block 14
+    $$$$$:    8-block 15
+call   24 never executed
+    $$$$$:    8-block 16
+    $$$$$:    8-block 17
+    $$$$$:    8-block 18
+call   25 never executed
+    $$$$$:    8-block 19
+    $$$$$:    8-block 20
+    $$$$$:    8-block 21
+    $$$$$:    8-block 22
+call   26 never executed
+    $$$$$:    8-block 23
+    $$$$$:    8-block 24
+    $$$$$:    8-block 25
+        1:    9:    }
+    $$$$$:    9-block  0
+call    0 never executed
+        -:   10:
+        -:   11:
+function _ZN8LifeGame7Printer13update_configERNS_6ConfigE called 1 returned 100% blocks executed 100%
+        1:   12:    void Printer::update_config(Config &cfg_new) {
+        1:   13:        cfg = cfg_new;
+        1:   13-block  0
+call    0 returned 1
+        1:   14:    }
+        -:   15:
+function _ZN8LifeGame7Printer19add_char_to_commandEc called 0 returned 0% blocks executed 0%
+    #####:   16:    void Printer::add_char_to_command(char ch) {
+    #####:   17:        user_command += ch;
+    %%%%%:   17-block  0
+call    0 never executed
+    #####:   18:    }
+        -:   19:
+function _ZN8LifeGame7Printer24remove_char_from_commandEv called 0 returned 0% blocks executed 0%
+    #####:   20:    void Printer::remove_char_from_command() {
+    #####:   21:        if (user_command.length()!=0) {
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   22:            user_command.replace(user_command.length()-1, 1, " ");
+    %%%%%:   22-block  0
+call    0 never executed
+call    1 never executed
+    #####:   23:            print_field_to_console();
+call    0 never executed
+    #####:   24:            user_command.pop_back();
+call    0 never executed
+        -:   25:        }
+    #####:   26:    }
+        -:   27:
+function _ZN8LifeGame7Printer12zero_commandEv called 0 returned 0% blocks executed 0%
+    #####:   28:    void Printer::zero_command() {
+    #####:   29:        user_command = "";
+    %%%%%:   29-block  0
+call    0 never executed
+    #####:   30:        is_printing=true;
+call    0 never executed
+    #####:   31:        Static::clear_console();
+call    0 never executed
+    #####:   32:        is_printing=false;
+call    0 never executed
+    #####:   33:    }
+        -:   34:
+function _ZN8LifeGame7Printer22print_field_to_consoleEv called 28 returned 100% blocks executed 86%
+       28:   35:    void Printer::print_field_to_console() {
+       28:   36:        while (is_printing) {}
+       28:   36-block  0
+       28:   36-block  1
+call    0 returned 28
+branch  1 taken 0
+branch  2 taken 28 (fallthrough)
+       28:   37:        is_printing=true;
+       28:   37-block  0
+call    0 returned 28
+       28:   38:        Static::move_console_to_zero();
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   39:        Static::set_console_color(Magenta, Black);
+       28:   39-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   40:        cout << cfg.get_name() << endl << cfg.get_comment() << endl;
+       28:   40-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   40-block  1
+call    3 returned 28
+branch  4 taken 28 (fallthrough)
+branch  5 taken 0 (throw)
+       28:   40-block  2
+call    6 returned 28
+branch  7 taken 28 (fallthrough)
+branch  8 taken 0 (throw)
+       28:   40-block  3
+call    9 returned 28
+branch 10 taken 28 (fallthrough)
+branch 11 taken 0 (throw)
+       28:   40-block  4
+call   12 returned 28
+branch 13 taken 28 (fallthrough)
+branch 14 taken 0 (throw)
+       28:   40-block  5
+call   15 returned 28
+branch 16 taken 28 (fallthrough)
+branch 17 taken 0 (throw)
+       28:   40-block  6
+call   18 returned 28
+call   19 returned 28
+    $$$$$:   40-block  7
+call   20 never executed
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+call   21 never executed
+    $$$$$:   40-block 10
+       28:   41:        Static::set_console_color(Black, Black);
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   42:        cout << endl;
+       28:   42-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   43:        string out_life;
+       28:   43-block  0
+call    0 returned 28
+       28:   44:        string out_dead;
+call    0 returned 28
+       28:   45:        vector<int> size = printer_field.get_size();
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+      308:   46:        for (int y=0; y!=size[1]; y++) {
+       28:   46-block  0
+      280:   46-block  1
+      308:   46-block  2
+call    0 returned 308
+branch  1 taken 280
+branch  2 taken 28 (fallthrough)
+     3080:   47:            for (int x=0; x!=size[0]; x++) {
+      280:   47-block  0
+     2800:   47-block  1
+     3080:   47-block  2
+call    0 returned 3080
+branch  1 taken 2800
+branch  2 taken 280 (fallthrough)
+     2800:   48:                if (printer_field.get_element(y, x).get_is_life()) {
+     2800:   48-block  0
+call    0 returned 2800
+branch  1 taken 2800 (fallthrough)
+branch  2 taken 0 (throw)
+     2800:   48-block  1
+call    3 returned 2800
+branch  4 taken 2800 (fallthrough)
+branch  5 taken 0 (throw)
+     2800:   48-block  2
+branch  6 taken 140 (fallthrough)
+branch  7 taken 2660
+      140:   49:                    if (out_dead.length()!=0) {
+      140:   49-block  0
+call    0 returned 140
+branch  1 taken 92 (fallthrough)
+branch  2 taken 48
+       92:   50:                        Static::set_console_color(White, White);
+       92:   50-block  0
+call    0 returned 92
+branch  1 taken 92 (fallthrough)
+branch  2 taken 0 (throw)
+       92:   51:                        cout << out_dead;
+       92:   51-block  0
+call    0 returned 92
+branch  1 taken 92 (fallthrough)
+branch  2 taken 0 (throw)
+       92:   52:                        out_dead = "";
+       92:   52-block  0
+call    0 returned 92
+branch  1 taken 92 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   53:                    }
+      140:   54:                    out_life += "  ";
+      140:   54-block  0
+call    0 returned 140
+branch  1 taken 140 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   55:                }
+        -:   56:
+        -:   57:                else {
+     2660:   58:                    if (out_life.length()!=0) {
+     2660:   58-block  0
+call    0 returned 2660
+branch  1 taken 97 (fallthrough)
+branch  2 taken 2563
+       97:   59:                        Static::set_console_color(Green, Green);
+       97:   59-block  0
+call    0 returned 97
+branch  1 taken 97 (fallthrough)
+branch  2 taken 0 (throw)
+       97:   60:                        cout << out_life;
+       97:   60-block  0
+call    0 returned 97
+branch  1 taken 97 (fallthrough)
+branch  2 taken 0 (throw)
+       97:   61:                        out_life = "";
+       97:   61-block  0
+call    0 returned 97
+branch  1 taken 97 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   62:                    }
+     2660:   63:                    out_dead += "  ";
+     2660:   63-block  0
+call    0 returned 2660
+branch  1 taken 2660 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   64:                }
+     2800:   65:                Static::set_console_color(Black, Black);
+     2800:   65-block  0
+call    0 returned 2800
+branch  1 taken 2800 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   66:            }
+      280:   67:            if (out_dead.length()!=0) {
+      280:   67-block  0
+call    0 returned 280
+branch  1 taken 279 (fallthrough)
+branch  2 taken 1
+      279:   68:                Static::set_console_color(White, White);
+      279:   68-block  0
+call    0 returned 279
+branch  1 taken 279 (fallthrough)
+branch  2 taken 0 (throw)
+      279:   69:                cout << out_dead;
+      279:   69-block  0
+call    0 returned 279
+branch  1 taken 279 (fallthrough)
+branch  2 taken 0 (throw)
+      279:   70:                out_dead="";
+      279:   70-block  0
+call    0 returned 279
+branch  1 taken 279 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   71:            }
+      280:   72:            if (out_life.length()!=0) {
+      280:   72-block  0
+call    0 returned 280
+branch  1 taken 1 (fallthrough)
+branch  2 taken 279
+        1:   73:                Static::set_console_color(Green, Green);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74:                cout << out_life;
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75:                out_life="";
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   76:            }
+      280:   77:            Static::set_console_color(Black, Black);
+      280:   77-block  0
+call    0 returned 280
+branch  1 taken 280 (fallthrough)
+branch  2 taken 0 (throw)
+      280:   78:            cout << endl;
+      280:   78-block  0
+call    0 returned 280
+branch  1 taken 280 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   79:        }
+       28:   80:        Static::set_console_color(Black, Black);
+       28:   80-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   81:        cout << endl;
+       28:   81-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   82:        Static::set_console_color(Magenta, Black);
+       28:   82-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   83:        cout << user_command;
+       28:   83-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   84:        Static::set_console_color(Black, Black);
+       28:   84-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   85:        cout<<endl;
+       28:   85-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   86:        Static::set_console_color(Magenta, Black);
+       28:   86-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   87:        cout<<condition;
+       28:   87-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   88:        Static::set_console_color(Black, Black);
+       28:   88-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   89:        cout<<endl;
+       28:   89-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   90:        is_printing=false;
+       28:   90-block  0
+call    0 returned 28
+       28:   91:    }
+call    0 returned 28
+call    1 returned 28
+call    2 returned 28
+    $$$$$:   91-block  0
+call    3 never executed
+    $$$$$:   91-block  1
+call    4 never executed
+    $$$$$:   91-block  2
+call    5 never executed
+        -:   92:
+function _ZN8LifeGame7Printer20update_printer_fieldERKNS_5FieldE called 28 returned 100% blocks executed 100%
+       28:   93:    void Printer::update_printer_field(const Field& the_field) {
+       28:   94:        printer_field = the_field;
+       28:   94-block  0
+call    0 returned 28
+       28:   95:    }
+        -:   96:
+function _ZN8LifeGame7Printer13set_conditionENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   97:    void Printer::set_condition(string cond) {
+    #####:   98:        condition = std::move(cond);
+    %%%%%:   98-block  0
+call    0 never executed
+call    1 never executed
+    #####:   99:    }
+        -:  100:
+function _ZN8LifeGame7Printer16print_game_cycleERKNS_5FieldE called 28 returned 100% blocks executed 100%
+       28:  101:    void Printer::print_game_cycle(const Field& the_field) {
+       28:  102:        update_printer_field(the_field);
+       28:  102-block  0
+call    0 returned 28
+       28:  103:        print_field_to_console();
+call    0 returned 28
+       28:  104:    }
+        -:  105:}

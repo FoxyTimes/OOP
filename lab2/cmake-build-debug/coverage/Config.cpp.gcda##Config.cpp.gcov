@@ -1,0 +1,262 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab2/src/Config.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Config.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Config.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Config.h"
+        -:    2:#include <utility>
+        -:    3:#include "Static.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        -:    8:namespace LifeGame {
+function _ZN8LifeGame6ConfigC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_St6vectorIiSaIiEES9_ called 2 returned 100% blocks executed 100%
+        2:    9:    Config::Config(string name, string comment, vector<int> size, vector<int> rules) {
+        2:    9-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+        2:   10:        this->name = std::move(name);
+call    0 returned 2
+call    1 returned 2
+        2:   11:        this->comment = std::move(comment);
+call    0 returned 2
+call    1 returned 2
+        2:   12:        this->size = std::move(size);
+call    0 returned 2
+call    1 returned 2
+        2:   13:        this->rules = std::move(rules);
+call    0 returned 2
+call    1 returned 2
+        2:   14:    }
+        -:   15:
+function _ZN8LifeGame6Config6renameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   16:    void Config::rename(string new_name) {
+    %%%%%:   16-block  0
+    #####:   17:        vector<string> splited_str = Static::split_str(std::move(new_name), "#N ");
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   17-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   17-block  2
+call    8 never executed
+call    9 never executed
+    $$$$$:   17-block  3
+call   10 never executed
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+call   11 never executed
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+    #####:   18:        name = splited_str[0];
+    %%%%%:   18-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   19:    }
+    %%%%%:   19-block  0
+call    0 never executed
+    $$$$$:   19-block  1
+call    1 never executed
+function _ZN8LifeGame6Config9recommentENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   20:    void Config::recomment(string new_comment) {
+    %%%%%:   20-block  0
+    #####:   21:        vector<string> splited_str = Static::split_str(std::move(new_comment), "#C ");
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   21-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   21-block  2
+call    8 never executed
+call    9 never executed
+    $$$$$:   21-block  3
+call   10 never executed
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call   11 never executed
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+    #####:   22:        comment = splited_str[0];
+    %%%%%:   22-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   23:    }
+    %%%%%:   23-block  0
+call    0 never executed
+    $$$$$:   23-block  1
+call    1 never executed
+        -:   24:
+function _ZN8LifeGame6Config7resizecENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   25:    void Config::resizec(string new_size) {
+    %%%%%:   25-block  0
+    #####:   26:        vector<string> splited_str = Static::split_str(std::move(new_size), "#S ");
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   26-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   26-block  2
+call    8 never executed
+call    9 never executed
+    $$$$$:   26-block  3
+call   10 never executed
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+call   11 never executed
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+    #####:   27:        int height = stoi(splited_str[0]);
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   28:        int width = stoi(splited_str[1]);
+    %%%%%:   28-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   29:        vector<int> normal_size = {height, width};
+    %%%%%:   29-block  0
+    %%%%%:   29-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   29-block  2
+    $$$$$:   29-block  3
+    #####:   30:        size = normal_size;
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   31:    }
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   31-block  1
+call    2 never executed
+    $$$$$:   31-block  2
+call    3 never executed
+        -:   32:
+function _ZN8LifeGame6Config7rerulesENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   33:    void Config::rerules(string new_rules) {
+    %%%%%:   33-block  0
+    #####:   34:        vector<string> splited_str = Static::split_str(std::move(new_rules), "#R B/S");
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   34-block  1
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   34-block  2
+call    8 never executed
+call    9 never executed
+    $$$$$:   34-block  3
+call   10 never executed
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+call   11 never executed
+    $$$$$:   34-block  6
+    $$$$$:   34-block  7
+    #####:   35:        int to_born = stoi(splited_str[0]);
+    %%%%%:   35-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   36:        int to_live = stoi(splited_str[1]);
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   37:        vector<int> normal_rules = {to_born, to_live};
+    %%%%%:   37-block  0
+    %%%%%:   37-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    #####:   38:        rules = normal_rules;
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   39:    }
+    %%%%%:   39-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   39-block  1
+call    2 never executed
+    $$$$$:   39-block  2
+call    3 never executed
+        -:   40:
+function _ZN8LifeGame6Config9get_rulesEv called 0 returned 0% blocks executed 0%
+    #####:   41:    vector<int> Config::get_rules() {
+    #####:   42:        return rules;
+    %%%%%:   42-block  0
+call    0 never executed
+        -:   43:    }
+        -:   44:
+function _ZN8LifeGame6Config11get_to_liveEv called 27 returned 100% blocks executed 100%
+       27:   45:    int Config::get_to_live() {
+       27:   46:        return rules[1];
+       27:   46-block  0
+call    0 returned 27
+        -:   47:    }
+        -:   48:
+function _ZN8LifeGame6Config8get_sizeEv called 10 returned 100% blocks executed 100%
+       10:   49:    vector<int> Config::get_size() {
+       10:   50:        return size;
+       10:   50-block  0
+call    0 returned 10
+        -:   51:    }
+        -:   52:
+function _ZN8LifeGame6Config11get_commentB5cxx11Ev called 28 returned 100% blocks executed 100%
+       28:   53:    string Config::get_comment() {
+       28:   54:        return comment;
+       28:   54-block  0
+call    0 returned 28
+        -:   55:    }
+        -:   56:
+function _ZN8LifeGame6Config11get_to_bornEv called 27 returned 100% blocks executed 100%
+       27:   57:    int Config::get_to_born() {
+       27:   58:        return rules[0];
+       27:   58-block  0
+call    0 returned 27
+        -:   59:    }
+        -:   60:
+function _ZN8LifeGame6Config8get_nameB5cxx11Ev called 28 returned 100% blocks executed 100%
+       28:   61:    string Config::get_name() {
+       28:   62:        return name;
+       28:   62-block  0
+call    0 returned 28
+        -:   63:    }
+        -:   64:}

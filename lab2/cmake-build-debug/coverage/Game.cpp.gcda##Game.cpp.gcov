@@ -1,0 +1,1474 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab2/src/Game.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Game.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Game.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Game.h"
+        -:    2:#include "Field.h"
+        -:    3:#include "fstream"
+        -:    4:#include "Static.h"
+        -:    5:#include "unistd.h"
+        -:    6:#include "iostream"
+        -:    7:#include "conio.h"
+        -:    8:#include "memory"
+        -:    9:#include "mutex"
+        -:   10:
+        -:   11:#define default_wdh 10
+        -:   12:#define default_hgt 10
+        -:   13:
+        -:   14:#define help_ "-help-\n'exit' - quit the program\n'pause' - pause the program\n'unpause' - unpause the program\n'tick <n=1>' - calculate n (default is 1) iterations and print the result\n'dump <filename>' - save the universe to a file\n\n IF YOU HAVE PROBLEMS WITH OUTPUT TO THE CONSOLE, THEN WRITE 'reload'"
+        -:   15:
+        -:   16:
+        -:   17:
+        -:   18:using namespace std;
+        -:   19:
+        -:   20:namespace LifeGame {
+        -:   21:
+function _ZN8LifeGame4GameC2Ev called 1 returned 100% blocks executed 49%
+        9:   22:    Game::Game():game_field(Field(default_wdh, default_hgt)), cfg(Config()), printer(std::make_unique<Printer>(game_field)) {
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   22-block  1
+        1:   22-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   22-block  3
+        1:   22-block  4
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   22-block  5
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   22-block  6
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   22-block  7
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   22-block  8
+call   19 returned 1
+        1:   22-block  9
+call   20 returned 1
+        1:   22-block 10
+call   21 returned 1
+        1:   22-block 11
+call   22 returned 1
+        1:   22-block 12
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   22-block 13
+call   26 never executed
+    $$$$$:   22-block 14
+    $$$$$:   22-block 15
+    $$$$$:   22-block 16
+call   27 never executed
+    $$$$$:   22-block 17
+    $$$$$:   22-block 18
+    $$$$$:   22-block 19
+call   28 never executed
+    $$$$$:   22-block 20
+    $$$$$:   22-block 21
+    $$$$$:   22-block 22
+    $$$$$:   22-block 23
+call   29 never executed
+    $$$$$:   22-block 24
+    $$$$$:   22-block 25
+    $$$$$:   22-block 26
+        1:   23:    }
+    $$$$$:   23-block  0
+call    0 never executed
+    $$$$$:   23-block  1
+call    1 never executed
+function _ZN8LifeGame4GameD2Ev called 0 returned 0% blocks executed 0%
+    #####:   24:    Game::~Game() = default;
+    %%%%%:   24-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   25:
+function _ZN8LifeGame4Game12run_the_gameEv called 1 returned 0% blocks executed 77%
+        1:   26:    void Game::run_the_game() {
+        -:   27:
+        1:   28:        if (!exit_flag) {
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   29:            Static::hide_cursor();
+        1:   29-block  0
+call    0 returned 1
+        1:   30:            (*printer).update_config(cfg);
+call    0 returned 1
+call    1 returned 1
+        1:   31:            (*printer).print_game_cycle(game_field);
+call    0 returned 1
+call    1 returned 1
+        1:   32:            usleep(100000);
+call    0 returned 1
+        -:   33:        }
+        -:   34:
+        1:   35:        previous_console_size = Static::check_console_size();
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   35-block  2
+call    5 never executed
+        -:   36:
+       27:   37:        while (!exit_flag) {
+       27:   37-block  0
+call    0 returned 27
+branch  1 taken 27
+branch  2 taken 0 (fallthrough)
+       27:   38:            vector<int> new_console_size = Static::check_console_size();
+       27:   38-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+      27*:   39:            if (previous_console_size[0]!=new_console_size[0]||previous_console_size[1]!=new_console_size[1]) {
+       27:   39-block  0
+call    0 returned 27
+call    1 returned 27
+branch  2 taken 27 (fallthrough)
+branch  3 taken 0
+       27:   39-block  1
+call    4 returned 27
+call    5 returned 27
+branch  6 taken 0 (fallthrough)
+branch  7 taken 27
+    %%%%%:   39-block  2
+       27:   39-block  3
+       27:   39-block  4
+branch  8 taken 0 (fallthrough)
+branch  9 taken 27
+    #####:   40:                Static::clear_console();
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   41:                Static::hide_cursor();
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   42:            }
+       27:   43:            previous_console_size = new_console_size;
+       27:   43-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   44:            //Static::clear_console();
+      27*:   45:            while(pause_flag&&!exit_flag) {}
+       27:   45-block  0
+       27:   45-block  1
+call    0 returned 27
+branch  1 taken 0 (fallthrough)
+branch  2 taken 27
+    %%%%%:   45-block  2
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    %%%%%:   45-block  3
+       27:   45-block  4
+       27:   45-block  5
+branch  6 taken 0
+branch  7 taken 27 (fallthrough)
+       27:   46:            one_game_cycle();
+       27:   46-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+       27:   47:            Static::move_console_to_zero();
+       27:   47-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+       27:   48:            (*printer).print_game_cycle(game_field);
+       27:   48-block  0
+call    0 returned 27
+call    1 returned 27
+branch  2 taken 27 (fallthrough)
+branch  3 taken 0 (throw)
+       27:   49:            usleep(100000);
+       27:   49-block  0
+call    0 returned 26
+       26:   50:        }
+call    0 returned 26
+    $$$$$:   50-block  0
+call    1 never executed
+    #####:   51:        Static::make_console_standart();
+    %%%%%:   51-block  0
+call    0 never executed
+    #####:   52:    }
+        -:   53:
+function _ZN8LifeGame4Game11run_offlineEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   54:    void Game::run_offline(int iterations, const string& name_output) {
+    #####:   55:        for (int i=0; i!=iterations; i++) {
+    %%%%%:   55-block  0
+    %%%%%:   55-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   56:            one_game_cycle();
+    %%%%%:   56-block  0
+call    0 never executed
+        -:   57:        }
+    #####:   58:        load_to_file(name_output);
+    %%%%%:   58-block  0
+call    0 never executed
+    #####:   59:    }
+        -:   60:
+function _ZN8LifeGame4Game13exit_the_gameEv called 0 returned 0% blocks executed 0%
+    #####:   61:    void Game::exit_the_game() {
+    #####:   62:        exit_flag=true;
+    %%%%%:   62-block  0
+call    0 never executed
+    #####:   63:    }
+        -:   64:
+        -:   65:
+        -:   66:
+function _ZN8LifeGame4Game12load_to_fileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   67:    void Game::load_to_file(const std::string &name_of_file) {
+    #####:   68:        if (!name_of_file.empty()) {
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   69:            ofstream universe_file(name_of_file);
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   70:
+        -:   71:
+    #####:   72:            universe_file << "#N " << cfg.get_name() << endl;
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   72-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   72-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   72-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   72-block  4
+call   12 never executed
+    $$$$$:   72-block  5
+call   13 never executed
+    $$$$$:   72-block  6
+    #####:   73:            universe_file << "#C " << cfg.get_comment() << endl;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   73-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   73-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   73-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   73-block  3
+call   12 never executed
+    $$$$$:   73-block  4
+call   13 never executed
+    $$$$$:   73-block  5
+    #####:   74:            universe_file << "#S " << cfg.get_size()[0] << " " << cfg.get_size()[1] << endl;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   74-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   74-block  1
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   74-block  2
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   74-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   74-block  4
+call   16 never executed
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   74-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   74-block  6
+call   23 never executed
+call   24 never executed
+    $$$$$:   74-block  7
+call   25 never executed
+    $$$$$:   74-block  8
+    $$$$$:   74-block  9
+call   26 never executed
+    $$$$$:   74-block 10
+    #####:   75:            universe_file << "#R " << cfg.get_rules()[0] << " " << cfg.get_rules()[1] << endl;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   75-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   75-block  1
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   75-block  2
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   75-block  3
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   75-block  4
+call   16 never executed
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   75-block  5
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   75-block  6
+call   23 never executed
+call   24 never executed
+    $$$$$:   75-block  7
+call   25 never executed
+    $$$$$:   75-block  8
+    $$$$$:   75-block  9
+call   26 never executed
+    $$$$$:   75-block 10
+        -:   76:
+    #####:   77:            for (int y=0; y!=cfg.get_size()[0]; y++) {
+    %%%%%:   77-block  0
+    %%%%%:   77-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   77-block  2
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed (fallthrough)
+    $$$$$:   77-block  3
+    #####:   78:                for (int x=0; x!=cfg.get_size()[1]; x++) {
+    %%%%%:   78-block  0
+    %%%%%:   78-block  1
+    %%%%%:   78-block  2
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   78-block  3
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed (fallthrough)
+    $$$$$:   78-block  4
+    #####:   79:                    if (game_field.get_element(y, x).get_is_life()) {
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   79-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   79-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   80:                        universe_file << x << " " << y << endl;
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   80-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   80-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   80-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+        -:   81:                    }
+        -:   82:                }
+        -:   83:            }
+    #####:   84:        }
+    %%%%%:   84-block  0
+call    0 never executed
+    $$$$$:   84-block  1
+call    1 never executed
+    #####:   85:    }
+    %%%%%:   85-block  0
+        -:   86:
+function _ZN8LifeGame4Game14pause_the_gameEv called 0 returned 0% blocks executed 0%
+    #####:   87:    void Game::pause_the_game() {
+    #####:   88:        pause_flag = true;
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:    }
+        -:   90:
+function _ZN8LifeGame4Game10game_inputEv called 1 returned 0% blocks executed 12%
+        1:   91:    void Game::game_input() {
+        -:   92:        char ch;
+        1:   93:        string command;
+        1:   93-block  0
+call    0 returned 1
+      195:   94:        while (!exit_flag) {
+      195:   94-block  0
+call    0 returned 195
+branch  1 taken 195
+branch  2 taken 0 (fallthrough)
+      195:   95:            if (kbhit())
+      195:   95-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:   95-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+        -:   96:            {
+    #####:   97:                ch = _getch();
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   98:                if (ch == '\b') {
+    %%%%%:   98-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   99:                    (*printer).remove_char_from_command();
+    %%%%%:   99-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  100:                    if (command.length()!=0) {
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  101:                        command.pop_back();
+    %%%%%:  101-block  0
+call    0 never executed
+        -:  102:                    }
+        -:  103:                }
+        -:  104:                else {
+    #####:  105:                    (*printer).add_char_to_command(ch);
+    %%%%%:  105-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  106:                    command += ch;
+    %%%%%:  106-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  107:                }
+        -:  108:            }
+      195:  109:            if (command == "exit\r") {
+      195:  109-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:  109-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+    #####:  110:                exit_the_game();
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:                break;
+        -:  112:            }
+      195:  113:            if (command == "pause\r") {
+      195:  113-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:  113-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+    #####:  114:                (*printer).zero_command();
+    %%%%%:  114-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  115:                printer->set_condition("PAUSED");
+    %%%%%:  115-block  0
+call    0 never executed
+    %%%%%:  115-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  115-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  115-block  3
+call    7 never executed
+    $$$$$:  115-block  4
+call    8 never executed
+    $$$$$:  115-block  5
+    $$$$$:  115-block  6
+    #####:  116:                command="";
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  117:                pause_flag = true;
+    %%%%%:  117-block  0
+call    0 never executed
+    #####:  118:                ch=0;
+        -:  119:            }
+      195:  120:            if (command == "unpause\r") {
+      195:  120-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:  120-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+    #####:  121:                (*printer).zero_command();
+    %%%%%:  121-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  122:                printer->set_condition("UNPAUSED");
+    %%%%%:  122-block  0
+call    0 never executed
+    %%%%%:  122-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  122-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  122-block  3
+call    7 never executed
+    $$$$$:  122-block  4
+call    8 never executed
+    $$$$$:  122-block  5
+    $$$$$:  122-block  6
+    #####:  123:                command="";
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  124:                pause_flag = false;
+    %%%%%:  124-block  0
+call    0 never executed
+    #####:  125:                ch=0;
+        -:  126:            }
+      195:  127:            if (command == "reload\r") {
+      195:  127-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:  127-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+    #####:  128:                (*printer).zero_command();
+    %%%%%:  128-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  129:                printer->set_condition("");
+    %%%%%:  129-block  0
+call    0 never executed
+    %%%%%:  129-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  129-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  129-block  3
+call    7 never executed
+    $$$$$:  129-block  4
+call    8 never executed
+    $$$$$:  129-block  5
+    $$$$$:  129-block  6
+    #####:  130:                command="";
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  131:                Static::clear_console();
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  132:                ch=0;
+    %%%%%:  132-block  0
+        -:  133:            }
+      195:  134:            if (command == "help\r") {
+      195:  134-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0 (throw)
+      195:  134-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 195
+    #####:  135:                (*printer).zero_command();
+    %%%%%:  135-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  136:                printer->set_condition(help_);
+    %%%%%:  136-block  0
+call    0 never executed
+    %%%%%:  136-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  136-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  136-block  3
+call    7 never executed
+    $$$$$:  136-block  4
+call    8 never executed
+    $$$$$:  136-block  5
+    $$$$$:  136-block  6
+    #####:  137:                command="";
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  138:                ch=0;
+    %%%%%:  138-block  0
+        -:  139:            }
+      195:  140:            if (command.find("dump ")!=string::npos) {
+      195:  140-block  0
+call    0 returned 195
+branch  1 taken 0 (fallthrough)
+branch  2 taken 195
+    #####:  141:                vector<string> splited_string = Static::split_str(command, " ");
+    %%%%%:  141-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  141-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  141-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  141-block  3
+call    9 never executed
+call   10 never executed
+    $$$$$:  141-block  4
+call   11 never executed
+    $$$$$:  141-block  5
+    $$$$$:  141-block  6
+call   12 never executed
+    $$$$$:  141-block  7
+    $$$$$:  141-block  8
+    #####:  142:                if (splited_string[1].find('\r')!=string::npos) {
+    %%%%%:  142-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  143:                    splited_string[1].pop_back();
+    %%%%%:  143-block  0
+call    0 never executed
+call    1 never executed
+    #####:  144:                    load_to_file(splited_string[1]);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  145:                    (*printer).zero_command();
+    %%%%%:  145-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  146:                    printer->set_condition("load is successful");
+    %%%%%:  146-block  0
+call    0 never executed
+    %%%%%:  146-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  146-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  146-block  3
+call    7 never executed
+    $$$$$:  146-block  4
+call    8 never executed
+    $$$$$:  146-block  5
+    $$$$$:  146-block  6
+    #####:  147:                    command="";
+    %%%%%:  147-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  148:                    ch=0;
+    %%%%%:  148-block  0
+        -:  149:                }
+    #####:  150:            }
+    %%%%%:  150-block  0
+call    0 never executed
+    $$$$$:  150-block  1
+call    1 never executed
+     195*:  151:            if (command.find("tick ")!=string::npos||command.find("t ")!=string::npos) {
+      195:  151-block  0
+call    0 returned 195
+branch  1 taken 195 (fallthrough)
+branch  2 taken 0
+      195:  151-block  1
+call    3 returned 195
+branch  4 taken 0 (fallthrough)
+branch  5 taken 195
+    %%%%%:  151-block  2
+      195:  151-block  3
+      195:  151-block  4
+branch  6 taken 0 (fallthrough)
+branch  7 taken 195
+    #####:  152:                vector<string> splited_string = Static::split_str(command, " <n=>");
+    %%%%%:  152-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  152-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  152-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  152-block  3
+call    9 never executed
+call   10 never executed
+    $$$$$:  152-block  4
+call   11 never executed
+    $$$$$:  152-block  5
+    $$$$$:  152-block  6
+call   12 never executed
+    $$$$$:  152-block  7
+    $$$$$:  152-block  8
+    #####:  153:                if (splited_string[1].find('\r')!=string::npos) {
+    %%%%%:  153-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  154:                    splited_string[1].pop_back();
+    %%%%%:  154-block  0
+call    0 never executed
+call    1 never executed
+    #####:  155:                    pause_the_game();
+call    0 never executed
+    #####:  156:                    if (splited_string[1].empty()) {
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  157:                        splited_string[1] = '1';
+    %%%%%:  157-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+        -:  158:                    }
+    #####:  159:                    for (int i=0; i!=abs(stoi(splited_string[1])); i++) {
+    %%%%%:  159-block  0
+    %%%%%:  159-block  1
+    %%%%%:  159-block  2
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  159-block  3
+branch  4 never executed
+branch  5 never executed (fallthrough)
+    #####:  160:                        one_game_cycle();
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  161:                    }
+    #####:  162:                    printer->zero_command();
+    %%%%%:  162-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  163:                    printer->set_condition("PAUSED");
+    %%%%%:  163-block  0
+call    0 never executed
+    %%%%%:  163-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  163-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  163-block  3
+call    7 never executed
+    $$$$$:  163-block  4
+call    8 never executed
+    $$$$$:  163-block  5
+    $$$$$:  163-block  6
+    #####:  164:                    command="";
+    %%%%%:  164-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  165:                    Static::move_console_to_zero();
+    %%%%%:  165-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  166:                    (*printer).print_game_cycle(game_field);
+    %%%%%:  166-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  167:                    ch=0;
+    %%%%%:  167-block  0
+        -:  168:                }
+    #####:  169:            }
+    %%%%%:  169-block  0
+call    0 never executed
+    $$$$$:  169-block  1
+call    1 never executed
+      195:  170:            if (pause_flag) {
+      195:  170-block  0
+call    0 returned 195
+branch  1 taken 0 (fallthrough)
+branch  2 taken 195
+    #####:  171:                printer->print_field_to_console();
+    %%%%%:  171-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+        -:  172:            }
+      195:  173:            if (ch=='\r') {
+      195:  173-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 195
+    #####:  174:                printer->zero_command();
+    %%%%%:  174-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  175:                command="";
+    %%%%%:  175-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  176:                Static::move_console_to_zero();
+    %%%%%:  176-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  177:                (*printer).print_field_to_console();
+    %%%%%:  177-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:  178:                ch=0;
+    %%%%%:  178-block  0
+        -:  179:            }
+      195:  180:            usleep(10000);
+      195:  180-block  0
+call    0 returned 194
+        -:  181:        }
+    #####:  182:        Static::make_console_standart();
+    %%%%%:  182-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  183:    }
+    %%%%%:  183-block  0
+call    0 never executed
+    $$$$$:  183-block  1
+call    1 never executed
+        -:  184:
+function _ZN8LifeGame4Game14next_iterationEv called 27 returned 100% blocks executed 87%
+       27:  185:    void Game::next_iteration() {
+       27:  186:        vector<int> size = get_field().get_size();
+       27:  186-block  0
+call    0 returned 27
+call    1 returned 27
+branch  2 taken 27 (fallthrough)
+branch  3 taken 0 (throw)
+       27:  187:        int flag_to_live = false;
+       27:  188:        vector<int> to_live = Static::from_number_to_digit(cfg.get_to_live());
+       27:  188-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+       27:  188-block  1
+call    3 returned 27
+branch  4 taken 27 (fallthrough)
+branch  5 taken 0 (throw)
+       27:  189:        vector<int> to_born = Static::from_number_to_digit(cfg.get_to_born());
+       27:  189-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+       27:  189-block  1
+call    3 returned 27
+branch  4 taken 27 (fallthrough)
+branch  5 taken 0 (throw)
+      297:  190:        for (int y=0; y!=size[1]; y++) {
+       27:  190-block  0
+      270:  190-block  1
+      297:  190-block  2
+call    0 returned 297
+branch  1 taken 270
+branch  2 taken 27 (fallthrough)
+     2970:  191:            for (int x=0; x!=size[0]; x++) {
+      270:  191-block  0
+     2970:  191-block  1
+call    0 returned 2970
+branch  1 taken 2700
+branch  2 taken 270 (fallthrough)
+     5400:  192:                for (int i=0; to_born[i]!=0; i++) {
+     2700:  192-block  0
+     2700:  192-block  1
+     5400:  192-block  2
+call    0 returned 5400
+branch  1 taken 2700
+branch  2 taken 2700 (fallthrough)
+     2700:  193:                    if (game_field.get_element(y, x).get_the_neighbors()==to_born[i]) {
+     2700:  193-block  0
+call    0 returned 2700
+branch  1 taken 2700 (fallthrough)
+branch  2 taken 0 (throw)
+     2700:  193-block  1
+call    3 returned 2700
+branch  4 taken 2700 (fallthrough)
+branch  5 taken 0 (throw)
+     2700:  193-block  2
+call    6 returned 2700
+branch  7 taken 95 (fallthrough)
+branch  8 taken 2605
+       95:  194:                        game_field.get_element(y, x).set_is_life(true);
+       95:  194-block  0
+call    0 returned 95
+branch  1 taken 95 (fallthrough)
+branch  2 taken 0 (throw)
+       95:  194-block  1
+call    3 returned 95
+branch  4 taken 95 (fallthrough)
+branch  5 taken 0 (throw)
+        -:  195:                    }
+        -:  196:                }
+     8100:  197:                for (int i=0; to_live[i]!=0; i++) {
+     2700:  197-block  0
+     5400:  197-block  1
+     8100:  197-block  2
+call    0 returned 8100
+branch  1 taken 5400
+branch  2 taken 2700 (fallthrough)
+     5400:  198:                    if (game_field.get_element(y, x).get_the_neighbors()==to_live[i]) {
+     5400:  198-block  0
+call    0 returned 5400
+branch  1 taken 5400 (fallthrough)
+branch  2 taken 0 (throw)
+     5400:  198-block  1
+call    3 returned 5400
+branch  4 taken 5400 (fallthrough)
+branch  5 taken 0 (throw)
+     5400:  198-block  2
+call    6 returned 5400
+branch  7 taken 257 (fallthrough)
+branch  8 taken 5143
+      257:  199:                        flag_to_live = true;
+      257:  199-block  0
+        -:  200:                    }
+        -:  201:                }
+     2700:  202:                if (flag_to_live==false) {
+     2700:  202-block  0
+branch  0 taken 2443 (fallthrough)
+branch  1 taken 257
+     2443:  203:                    game_field.get_element(y, x).set_is_life(false);
+     2443:  203-block  0
+call    0 returned 2443
+branch  1 taken 2443 (fallthrough)
+branch  2 taken 0 (throw)
+     2443:  203-block  1
+call    3 returned 2443
+branch  4 taken 2443 (fallthrough)
+branch  5 taken 0 (throw)
+        -:  204:                }
+     2700:  205:                flag_to_live = false;
+     2700:  205-block  0
+        -:  206:            }
+        -:  207:        }
+       27:  208:    }
+       27:  208-block  0
+call    0 returned 27
+call    1 returned 27
+call    2 returned 27
+    $$$$$:  208-block  1
+call    3 never executed
+    $$$$$:  208-block  2
+call    4 never executed
+    $$$$$:  208-block  3
+call    5 never executed
+        -:  209:
+function _ZN8LifeGame4Game14new_generationEv called 27 returned 100% blocks executed 100%
+       27:  210:    void Game::new_generation() {
+       27:  211:        game_field.recount_the_neighbors_for_all();
+       27:  211-block  0
+call    0 returned 27
+       27:  212:        next_iteration();
+call    0 returned 27
+       27:  213:    }
+        -:  214:
+function _ZN8LifeGame4Game14one_game_cycleEv called 27 returned 100% blocks executed 100%
+       27:  215:    void Game::one_game_cycle() {
+       27:  216:        new_generation();
+       27:  216-block  0
+call    0 returned 27
+       27:  217:        game_field.zero_neighbors();
+call    0 returned 27
+       27:  218:    }
+        -:  219:
+function _ZN8LifeGame4Game13read_the_fileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 29%
+        1:  220:    void Game::read_the_file(const string& name_of_file="") {
+        1:  221:        if (!name_of_file.empty()) {
+        1:  221-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:  222:            ifstream universe_file(name_of_file);
+    %%%%%:  222-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  223:
+    #####:  224:            string format;
+    %%%%%:  224-block  0
+call    0 never executed
+    #####:  225:            getline(universe_file, format);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  226:            cfg.rename(format);
+    %%%%%:  226-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  226-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  226-block  2
+call    6 never executed
+    $$$$$:  226-block  3
+call    7 never executed
+    $$$$$:  226-block  4
+        -:  227:
+    #####:  228:            string comment;
+call    0 never executed
+    #####:  229:            getline(universe_file, comment);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  230:            cfg.recomment(comment);
+    %%%%%:  230-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  230-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  230-block  2
+call    6 never executed
+    $$$$$:  230-block  3
+call    7 never executed
+    $$$$$:  230-block  4
+        -:  231:
+    #####:  232:            string size;
+call    0 never executed
+    #####:  233:            getline(universe_file, size);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  234:            cfg.resizec(size);
+    %%%%%:  234-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  234-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  234-block  2
+call    6 never executed
+    $$$$$:  234-block  3
+call    7 never executed
+    $$$$$:  234-block  4
+    #####:  235:            game_field = Field(cfg.get_size()[1], cfg.get_size()[0]);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  235-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  235-block  1
+call    7 never executed
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:  235-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  235-block  3
+call   14 never executed
+call   15 never executed
+call   16 never executed
+    $$$$$:  235-block  4
+call   17 never executed
+    $$$$$:  235-block  5
+call   18 never executed
+    $$$$$:  235-block  6
+    $$$$$:  235-block  7
+call   19 never executed
+    $$$$$:  235-block  8
+    $$$$$:  235-block  9
+        -:  236:
+    #####:  237:            string rules;
+call    0 never executed
+    #####:  238:            getline(universe_file, rules);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  239:            cfg.rerules(rules);
+    %%%%%:  239-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  239-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  239-block  2
+call    6 never executed
+    $$$$$:  239-block  3
+call    7 never executed
+    $$$$$:  239-block  4
+        -:  240:
+    #####:  241:            string i_line;
+call    0 never executed
+        -:  242:            int y, x;
+        -:  243:
+        -:  244:
+    #####:  245:            while (getline(universe_file, i_line)) {
+    %%%%%:  245-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  245-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  245-block  2
+branch  6 never executed
+branch  7 never executed (fallthrough)
+    #####:  246:                x = i_line[0] - '0';
+    %%%%%:  246-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  247:                y = i_line[2] - '0';
+    %%%%%:  247-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  248:                game_field.set_life(Static::count_the_true_index(y, cfg.get_size()[0]), Static::count_the_true_index(x, cfg.get_size()[1]), true);
+    %%%%%:  248-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  248-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  248-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  248-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  248-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:  248-block  5
+call   17 never executed
+call   18 never executed
+    $$$$$:  248-block  6
+call   19 never executed
+    $$$$$:  248-block  7
+    $$$$$:  248-block  8
+call   20 never executed
+    $$$$$:  248-block  9
+        -:  249:            }
+    #####:  250:        }
+    %%%%%:  250-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+    $$$$$:  250-block  1
+call    6 never executed
+    $$$$$:  250-block  2
+call    7 never executed
+    $$$$$:  250-block  3
+call    8 never executed
+    $$$$$:  250-block  4
+call    9 never executed
+    $$$$$:  250-block  5
+call   10 never executed
+    $$$$$:  250-block  6
+call   11 never executed
+        -:  251:        else {
+        1:  252:            game_field.set_life(Static::count_the_true_index(0, cfg.get_size()[0]), Static::count_the_true_index(-1, cfg.get_size()[1]), true);
+        1:  252-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  252-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  252-block  3
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  252-block  4
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  252-block  5
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  252-block  6
+call   19 never executed
+    $$$$$:  252-block  7
+    $$$$$:  252-block  8
+call   20 never executed
+    $$$$$:  252-block  9
+call   21 never executed
+        1:  253:            game_field.set_life(Static::count_the_true_index(1, cfg.get_size()[0]), Static::count_the_true_index(0, cfg.get_size()[1]), true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  253-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  253-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  253-block  2
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  253-block  3
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  253-block  4
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  253-block  5
+call   19 never executed
+    $$$$$:  253-block  6
+    $$$$$:  253-block  7
+call   20 never executed
+    $$$$$:  253-block  8
+call   21 never executed
+        1:  254:            game_field.set_life(Static::count_the_true_index(-1, cfg.get_size()[0]), Static::count_the_true_index(1, cfg.get_size()[1]), true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  254-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  254-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  254-block  2
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  254-block  3
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  254-block  4
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  254-block  5
+call   19 never executed
+    $$$$$:  254-block  6
+    $$$$$:  254-block  7
+call   20 never executed
+    $$$$$:  254-block  8
+call   21 never executed
+        1:  255:            game_field.set_life(Static::count_the_true_index(0, cfg.get_size()[0]), Static::count_the_true_index(1, cfg.get_size()[1]), true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  255-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  255-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  255-block  2
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  255-block  3
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  255-block  4
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  255-block  5
+call   19 never executed
+    $$$$$:  255-block  6
+    $$$$$:  255-block  7
+call   20 never executed
+    $$$$$:  255-block  8
+call   21 never executed
+        1:  256:            game_field.set_life(Static::count_the_true_index(1, cfg.get_size()[0]), Static::count_the_true_index(1, cfg.get_size()[1]), true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  256-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  256-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  256-block  2
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  256-block  3
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  256-block  4
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  256-block  5
+call   19 never executed
+    $$$$$:  256-block  6
+    $$$$$:  256-block  7
+call   20 never executed
+        -:  257:        }
+        1:  258:    }
+        1:  258-block  0
+        -:  259:
+        -:  260:
+function _ZN8LifeGame4Game11get_printerEv called 0 returned 0% blocks executed 0%
+    #####:  261:    Printer &Game::get_printer() {
+    #####:  262:        return (*printer);
+    %%%%%:  262-block  0
+call    0 never executed
+        -:  263:    }
+function _ZN8LifeGame4Game9get_fieldEv called 27 returned 100% blocks executed 100%
+       27:  264:    Field &Game::get_field() {
+       27:  265:        return game_field;
+       27:  265-block  0
+        -:  266:    }
+        -:  267:}

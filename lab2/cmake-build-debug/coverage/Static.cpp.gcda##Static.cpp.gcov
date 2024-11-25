@@ -1,0 +1,464 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab2/src/Static.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Static.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Static.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Static.h"
+        -:    2:#include "string"
+        -:    3:#include<windows.h>
+        -:    4:#include <utility>
+        -:    5:#include "vector"
+        -:    6:#include "iostream"
+        -:    7:#include "unistd.h"
+        -:    8:
+        -:    9:
+        -:   10:namespace LifeGame {
+function _ZN8LifeGame6Static20count_the_true_indexEii called 43210 returned 100% blocks executed 100%
+    43210:   11:    int Static::count_the_true_index(int index, int border) {
+    43210:   12:        int new_index = index%border;
+    43210:   13:        if (index<0) {
+    43210:   13-block  0
+branch  0 taken 1622 (fallthrough)
+branch  1 taken 41588
+     1622:   14:            new_index = index+border;
+     1622:   14-block  0
+        -:   15:        }
+    43210:   16:        return new_index;
+    43210:   16-block  0
+        -:   17:    }
+        -:   18:
+function _ZN8LifeGame6Static13clear_consoleEv called 1 returned 100% blocks executed 100%
+        1:   19:    void Static::clear_console() {
+        1:   20:        system("cls");
+        1:   20-block  0
+call    0 returned 1
+        1:   21:    }
+        -:   22:
+function _ZN8LifeGame6Static8copy_strENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEii called 0 returned 0% blocks executed 0%
+    #####:   23:    std::string Static::copy_str(std::string str, int from_index, int to_index) {
+    #####:   24:        std::string to;
+    %%%%%:   24-block  0
+call    0 never executed
+    #####:   25:        for (int i=from_index; i!=to_index; i++) {
+    %%%%%:   25-block  0
+    %%%%%:   25-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   26:            to.push_back(str[i]);
+    %%%%%:   26-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+        -:   27:        }
+    #####:   28:        return to;
+    %%%%%:   28-block  0
+    %%%%%:   28-block  1
+    =====:   29:    }
+    $$$$$:   29-block  0
+call    0 never executed
+function _ZN8LifeGame6Static9split_strENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_ called 0 returned 0% blocks executed 0%
+    #####:   30:    std::vector<std::string> Static::split_str(std::string str, std::string delim) {
+    %%%%%:   30-block  0
+    #####:   31:        std::vector<std::string> result(10000);
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   31-block  1
+call    3 never executed
+    #####:   32:        int index_in_result=0, the_previous_index=0, the_new_index=0;
+    #####:   33:        for (int i=0; i!=str.length(); i++, the_new_index=i) {
+    %%%%%:   33-block  0
+    %%%%%:   33-block  1
+    %%%%%:   33-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   34:            for (int j=0; j!=delim.length(); j++) {
+    %%%%%:   34-block  0
+    %%%%%:   34-block  1
+    %%%%%:   34-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   35:                if (str[i]==delim[j]) {
+    %%%%%:   35-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:   36:                    result[index_in_result] = copy_str(str, the_previous_index, i);
+    %%%%%:   36-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   36-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   36-block  2
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    $$$$$:   36-block  3
+call   10 never executed
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+    #####:   37:                    if (the_previous_index!=i) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   38:                        index_in_result++;
+    %%%%%:   38-block  0
+        -:   39:                    }
+    #####:   40:                    the_previous_index=i+1;
+    #####:   41:                    break;
+    %%%%%:   41-block  0
+        -:   42:                }
+        -:   43:            }
+        -:   44:        }
+    #####:   45:        result[index_in_result] = copy_str(str, the_previous_index, the_new_index);
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   45-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   45-block  2
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+    $$$$$:   45-block  3
+call   10 never executed
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+    #####:   46:        return result;
+    %%%%%:   46-block  0
+    =====:   47:    }
+    $$$$$:   47-block  0
+call    0 never executed
+        -:   48:
+        -:   49:
+function _ZN8LifeGame6Static20from_number_to_digitEi called 54 returned 100% blocks executed 89%
+       54:   50:    std::vector<int> Static::from_number_to_digit(int number) {
+       54:   51:        std::vector<int> digits;
+       54:   52:        digits.resize(1000);
+       54:   52-block  0
+call    0 returned 54
+branch  1 taken 54 (fallthrough)
+branch  2 taken 0 (throw)
+      135:   53:        for(int i=0; number!=0; i++) {
+       54:   53-block  0
+      135:   53-block  1
+branch  0 taken 81
+branch  1 taken 54 (fallthrough)
+       81:   54:            digits[i] = number % 10;
+       81:   54-block  0
+call    0 returned 81
+       81:   55:            number /= 10;
+        -:   56:        }
+       54:   57:        return digits;
+       54:   57-block  0
+       54:   57-block  1
+    =====:   58:    }
+    $$$$$:   58-block  0
+call    0 never executed
+        -:   59:
+function _ZN8LifeGame6Static21make_console_standartEv called 0 returned 0% blocks executed 0%
+    #####:   60:    void Static::make_console_standart() {
+    #####:   61:        Static::make_cursor_visible();
+    %%%%%:   61-block  0
+call    0 never executed
+    #####:   62:        Static::set_console_color(White, Black);
+call    0 never executed
+    #####:   63:        Static::clear_console();
+call    0 never executed
+    #####:   64:    }
+        -:   65:
+function _ZN8LifeGame6Static20move_console_to_zeroEv called 55 returned 100% blocks executed 100%
+       55:   66:    void Static::move_console_to_zero() {
+       55:   67:        COORD position = {0,0}; //позиция x и y
+       55:   68:        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+       55:   68-block  0
+call    0 returned 55
+branch  1 taken 55 (fallthrough)
+branch  2 taken 0 (throw)
+       55:   69:        SetConsoleCursorPosition(hConsole, position);
+       55:   69-block  0
+call    0 returned 55
+branch  1 taken 55 (fallthrough)
+branch  2 taken 0 (throw)
+       55:   70:    }
+       55:   70-block  0
+function _ZN8LifeGame6Static17set_console_colorE12ConsoleColorS1_ called 3745 returned 100% blocks executed 100%
+     3745:   71:    void Static::set_console_color(ConsoleColor text, ConsoleColor background)
+        -:   72:    {
+     3745:   73:        HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+     3745:   73-block  0
+call    0 returned 3745
+     3745:   74:        SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
+call    0 returned 3745
+     3745:   75:    }
+        -:   76:
+function _ZN8LifeGame6Static10parse_argsB5cxx11EiPPc called 0 returned 0% blocks executed 0%
+    #####:   77:    std::vector<std::string> Static::parse_args(int argc, char ** argv) {
+    #####:   78:        std::string iterations;
+    %%%%%:   78-block  0
+call    0 never executed
+    #####:   79:        std::string output_name;
+call    0 never executed
+    #####:   80:        for (int i=0; i!=argc; i++) {
+    %%%%%:   80-block  0
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   81:            std::string temp_argv = argv[i];
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   81-block  1
+    #####:   82:            if (temp_argv == "-o") {
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   82-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    #####:   83:                output_name = argv[i+1];
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   84:            }
+    #####:   85:            if (temp_argv == "-i") {
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   85-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    #####:   86:                iterations = argv[i+1];
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   87:            }
+    #####:   88:            if (temp_argv.find("--output=")!=std::string::npos) {
+    %%%%%:   88-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   89:                std::vector<std::string> splited_str = split_str(temp_argv, "=");
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   89-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   89-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   89-block  3
+call    9 never executed
+call   10 never executed
+    $$$$$:   89-block  4
+call   11 never executed
+    $$$$$:   89-block  5
+    $$$$$:   89-block  6
+call   12 never executed
+    $$$$$:   89-block  7
+    $$$$$:   89-block  8
+    #####:   90:                output_name = splited_str[1];
+    %%%%%:   90-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   91:            }
+    %%%%%:   91-block  0
+call    0 never executed
+    $$$$$:   91-block  1
+call    1 never executed
+    #####:   92:            if (temp_argv.find("--iterations=")!=std::string::npos) {
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   93:                std::vector<std::string> splited_str = split_str(temp_argv, "=");
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   93-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   93-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   93-block  3
+call    9 never executed
+call   10 never executed
+    $$$$$:   93-block  4
+call   11 never executed
+    $$$$$:   93-block  5
+    $$$$$:   93-block  6
+call   12 never executed
+    $$$$$:   93-block  7
+    $$$$$:   93-block  8
+    #####:   94:                iterations = splited_str[1];
+    %%%%%:   94-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    #####:   95:            }
+    %%%%%:   95-block  0
+call    0 never executed
+    $$$$$:   95-block  1
+call    1 never executed
+    #####:   96:        }
+    %%%%%:   96-block  0
+call    0 never executed
+    $$$$$:   96-block  1
+call    1 never executed
+    #####:   97:        std::vector<std::string> result = {iterations, output_name};
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   97-block  1
+    %%%%%:   97-block  2
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   97-block  3
+call    5 never executed
+    $$$$$:   97-block  4
+    $$$$$:   97-block  5
+    $$$$$:   97-block  6
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   97-block  7
+call    8 never executed
+    $$$$$:   97-block  8
+    #####:   98:        return result;
+    %%%%%:   98-block  0
+    %%%%%:   98-block  1
+    #####:   99:    }
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   99-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   99-block  2
+    %%%%%:   99-block  3
+call    6 never executed
+call    7 never executed
+    $$$$$:   99-block  4
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    $$$$$:   99-block  5
+    $$$$$:   99-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   99-block  7
+call   12 never executed
+    $$$$$:   99-block  8
+call   13 never executed
+    $$$$$:   99-block  9
+call   14 never executed
+        -:  100:
+function _ZN8LifeGame6Static11hide_cursorEv called 1 returned 100% blocks executed 100%
+        1:  101:    void Static::hide_cursor() {
+        1:  102:        HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  103:        CONSOLE_CURSOR_INFO info;
+        1:  104:        info.dwSize = 100;
+        1:  105:        info.bVisible = FALSE;
+        1:  106:        SetConsoleCursorInfo(consoleHandle, &info);
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107:    }
+        1:  107-block  0
+        -:  108:
+function _ZN8LifeGame6Static19make_cursor_visibleEv called 0 returned 0% blocks executed 0%
+    #####:  109:    void Static::make_cursor_visible() {
+    #####:  110:        HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  111:        CONSOLE_CURSOR_INFO info;
+    #####:  112:        info.dwSize = 1;
+    #####:  113:        info.bVisible = 4;
+    #####:  114:        SetConsoleCursorInfo(consoleHandle, &info);
+    %%%%%:  114-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  115:    }
+    %%%%%:  115-block  0
+        -:  116:
+function _ZN8LifeGame6Static18check_console_sizeEv called 28 returned 100% blocks executed 46%
+       28:  117:    std::vector<int> Static::check_console_size() {
+        -:  118:        CONSOLE_SCREEN_BUFFER_INFO csbi;
+       28:  119:        if (GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi)) {
+       28:  119-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:  119-block  1
+call    3 returned 28
+branch  4 taken 28 (fallthrough)
+branch  5 taken 0 (throw)
+       28:  119-block  2
+branch  6 taken 28 (fallthrough)
+branch  7 taken 0
+       28:  120:            int width = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+       28:  121:            int height = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+       56:  122:            std::vector<int> result = {height, width};
+       28:  122-block  0
+       28:  122-block  1
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  122-block  2
+    $$$$$:  122-block  3
+       28:  123:            return result;
+       28:  123-block  0
+call    0 returned 28
+       28:  124:        }
+call    0 returned 28
+    #####:  125:        std::vector<int> result = {0, 0};
+    %%%%%:  125-block  0
+    %%%%%:  125-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:  125-block  2
+    $$$$$:  125-block  3
+    #####:  126:        return result;
+    %%%%%:  126-block  0
+call    0 never executed
+    #####:  127:    }
+call    0 never executed
+        -:  128:
+        -:  129:
+        -:  130:}

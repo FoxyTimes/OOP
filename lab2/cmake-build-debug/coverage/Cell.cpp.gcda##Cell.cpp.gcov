@@ -1,0 +1,43 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab2/src/Cell.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Cell.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab2\cmake-build-debug\src\CMakeFiles\lab2_run.dir\Cell.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by qawwa on 04.11.2024.
+        -:    3://
+        -:    4:#include "Cell.h"
+        -:    5:
+        -:    6:namespace LifeGame {
+function _ZN8LifeGame4CellC2Ev called 100 returned 100% blocks executed 100%
+      100:    7:    Cell::Cell() {
+      100:    8:        is_life = false;
+      100:    9:        neighbors = 0;
+      100:   10:    }
+        -:   11:
+function _ZN8LifeGame4Cell11get_is_lifeEv called 24400 returned 100% blocks executed 100%
+    24400:   12:    bool Cell::get_is_life() {
+    24400:   13:        return is_life;
+    24400:   13-block  0
+        -:   14:    }
+        -:   15:
+function _ZN8LifeGame4Cell11set_is_lifeEb called 2543 returned 100% blocks executed 100%
+     2543:   16:    void Cell::set_is_life(bool to_set) {
+     2543:   17:        this->is_life=to_set;
+     2543:   18:    }
+        -:   19:
+function _ZN8LifeGame4Cell16add_the_neighborEv called 1080 returned 100% blocks executed 100%
+     1080:   20:    void Cell::add_the_neighbor() {
+     1080:   21:        neighbors++;
+     1080:   22:    }
+        -:   23:
+function _ZN8LifeGame4Cell13zero_neighborEv called 2700 returned 100% blocks executed 100%
+     2700:   24:    void Cell::zero_neighbor() {
+     2700:   25:        neighbors=0;
+     2700:   26:    }
+        -:   27:
+function _ZNK8LifeGame4Cell17get_the_neighborsEv called 8100 returned 100% blocks executed 100%
+     8100:   28:    int Cell::get_the_neighbors() const {
+     8100:   29:        return neighbors;
+     8100:   29-block  0
+        -:   30:    }
+        -:   31:}
