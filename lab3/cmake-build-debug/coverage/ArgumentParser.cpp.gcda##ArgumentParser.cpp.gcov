@@ -1,0 +1,146 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab3/src/parsers/ArgumentParser.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\parsers\ArgumentParser.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\parsers\ArgumentParser.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ArgumentParser.h"
+        -:    2:#include "Static.h"
+        -:    3:
+        -:    4:namespace SoundProcessor {
+function _ZN14SoundProcessor14ArgumentParser15parse_argumentsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 49995 returned 100% blocks executed 76%
+    49995:    5:    std::unique_ptr<BaseArg> ArgumentParser::parse_arguments(const std::string& argument) {
+    49995:    6:        std::unique_ptr<File> arg1 = parse_file(argument);
+    49995:    6-block  0
+call    0 returned 49995
+branch  1 taken 49995 (fallthrough)
+branch  2 taken 0 (throw)
+    49995:    6-block  1
+call    3 returned 49995
+branch  4 taken 49995 (fallthrough)
+branch  5 taken 0 (throw)
+    49995:    6-block  2
+call    6 returned 49995
+    $$$$$:    6-block  3
+call    7 never executed
+    $$$$$:    6-block  4
+    49995:    7:        if (arg1 != nullptr) {
+call    0 returned 49995
+branch  1 taken 1 (fallthrough)
+branch  2 taken 49994
+        1:    8:            return arg1;
+        1:    8-block  0
+call    0 returned 1
+        -:    9:        }
+    49994:   10:        std::unique_ptr<Times> arg2 = parse_time(argument);
+    49994:   10-block  0
+call    0 returned 49994
+branch  1 taken 49994 (fallthrough)
+branch  2 taken 0 (throw)
+    49994:   11:        if (arg2 != nullptr) {
+    49994:   11-block  0
+call    0 returned 49994
+branch  1 taken 5 (fallthrough)
+branch  2 taken 49989
+        5:   12:            return arg2;
+        5:   12-block  0
+call    0 returned 5
+        -:   13:        }
+    49989:   14:        return nullptr;
+    49989:   14-block  0
+call    0 returned 49989
+    49995:   15:    }
+    49994:   15-block  0
+call    0 returned 49994
+    49995:   15-block  1
+call    1 returned 49995
+    $$$$$:   15-block  2
+call    2 never executed
+        -:   16:
+function _ZN14SoundProcessor14ArgumentParser10parse_timeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 49994 returned 100% blocks executed 92%
+    49994:   17:    std::unique_ptr<Times> ArgumentParser::parse_time(const std::string& argument) {
+        -:   18:        try {
+    49994:   19:            Times time(stoi(argument));
+    49994:   19-block  0
+call    0 returned 49994
+branch  1 taken 5 (fallthrough)
+branch  2 taken 49989 (throw)
+        5:   19-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   20:            return std::make_unique<Times>(time);
+        5:   20-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   21:        }
+    49989:   22:        catch (std::exception& e) {
+    49989:   22-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 49989
+    49989:   22-block  1
+call    2 returned 49989
+    49989:   23:            return nullptr;
+call    0 returned 49989
+    49989:   24:        }
+        -:   25:    }
+        -:   26:
+function _ZN14SoundProcessor14ArgumentParser10parse_fileENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 49995 returned 100% blocks executed 60%
+    49995:   27:    std::unique_ptr<File> ArgumentParser::parse_file(std::string argument) {
+        -:   28:        try {
+    49995:   29:            if (argument[0] == '$') {
+    49995:   29-block  0
+call    0 returned 49995
+branch  1 taken 49995 (fallthrough)
+branch  2 taken 0 (throw)
+    49995:   29-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 49994
+        1:   30:                std::string temp = Static::copy_str(argument, 1, argument.size());
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   30-block  2
+call    7 returned 1
+    $$$$$:   30-block  3
+call    8 never executed
+    $$$$$:   30-block  4
+        1:   31:                int number_of_file = stoi(temp);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:                File result(number_of_file);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33:                return std::make_unique<File>(result);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:            }
+        1:   34-block  0
+call    0 returned 1
+    $$$$$:   34-block  1
+call    1 never executed
+    49994:   35:            return nullptr;
+    49994:   35-block  0
+call    0 returned 49994
+        -:   36:        }
+    =====:   37:        catch (std::exception &e) {
+    $$$$$:   37-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   37-block  1
+call    2 never executed
+    =====:   38:            return nullptr;
+call    0 never executed
+    =====:   39:        }
+        -:   40:    }
+        -:   41:}

@@ -1,0 +1,160 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab3/src/parsers/ConfigParser.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\parsers\ConfigParser.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\parsers\ConfigParser.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <fstream>
+        -:    2:#include "ConfigParser.h"
+        -:    3:#include "string"
+        -:    4:#include "Static.h"
+        -:    5:#include "ArgumentParser.h"
+        -:    6:
+        -:    7:namespace SoundProcessor {
+function _ZN14SoundProcessor12ConfigParser20parse_string_to_instERSt14basic_ifstreamIcSt11char_traitsIcEE called 9 returned 100% blocks executed 59%
+        9:    8:    Instruction ConfigParser::parse_string_to_inst(std::ifstream &config) {
+        -:    9:        //разделение на слова
+        9:   10:        std::string our_string;
+        9:   10-block  0
+call    0 returned 9
+        9:   11:        std::getline(config, our_string);
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   12:        std::vector<std::string> splited_string = Static::split_str(our_string, " ");
+        9:   12-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   12-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   12-block  2
+call    6 returned 9
+branch  7 taken 9 (fallthrough)
+branch  8 taken 0 (throw)
+        9:   12-block  3
+call    9 returned 9
+call   10 returned 9
+    $$$$$:   12-block  4
+call   11 never executed
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+call   12 never executed
+    $$$$$:   12-block  7
+    $$$$$:   12-block  8
+        -:   13:
+        -:   14:        //проверка на комментарий
+        9:   15:        if (splited_string[0][0]=='#') {
+        9:   15-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:   15-block  1
+branch  4 taken 4 (fallthrough)
+branch  5 taken 5
+        4:   16:            Instruction result(true, splited_string);
+        4:   16-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   16-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   16-block  2
+call    6 returned 4
+    $$$$$:   16-block  3
+call    7 never executed
+    $$$$$:   16-block  4
+        4:   17:            return result;
+call    0 returned 4
+        4:   18:        }
+call    0 returned 4
+        -:   19:        else {
+        5:   20:            Instruction result(false, splited_string);
+        5:   20-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   20-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   20-block  2
+call    6 returned 5
+    $$$$$:   20-block  3
+call    7 never executed
+    $$$$$:   20-block  4
+        5:   21:            return result;
+call    0 returned 5
+        5:   22:        }
+call    0 returned 5
+        9:   23:    }
+        9:   23-block  0
+call    0 returned 9
+call    1 returned 9
+    $$$$$:   23-block  1
+call    2 never executed
+    $$$$$:   23-block  2
+call    3 never executed
+        -:   24:
+function _ZN14SoundProcessor12ConfigParser17parse_instructionENS_11InstructionE called 9 returned 100% blocks executed 83%
+        9:   25:    std::queue<std::unique_ptr<BaseArg>> ConfigParser::parse_instruction(Instruction inst) {
+        9:   26:        std::queue<std::unique_ptr<BaseArg>> queue_args;
+        9:   26-block  0
+call    0 returned 9
+        9:   27:        if (inst.get_is_comment()) {
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   27-block  0
+branch  3 taken 4 (fallthrough)
+branch  4 taken 5
+        4:   28:            return queue_args;
+        4:   28-block  0
+        -:   29:        }
+    50000:   30:        for (int i = 1; i < inst.get_instruction().size(); ++i) {
+        5:   30-block  0
+    50000:   30-block  1
+call    0 returned 50000
+branch  1 taken 50000 (fallthrough)
+branch  2 taken 0 (throw)
+    50000:   30-block  2
+call    3 returned 50000
+branch  4 taken 49995
+branch  5 taken 5 (fallthrough)
+    49995:   31:            std::unique_ptr<BaseArg> our_arg = ArgumentParser::parse_arguments(inst.get_instruction()[i]);
+    49995:   31-block  0
+call    0 returned 49995
+branch  1 taken 49995 (fallthrough)
+branch  2 taken 0 (throw)
+    49995:   31-block  1
+call    3 returned 49995
+call    4 returned 49995
+branch  5 taken 49995 (fallthrough)
+branch  6 taken 0 (throw)
+    49995:   32:            if (our_arg) {  // Проверка на nullptr
+    49995:   32-block  0
+call    0 returned 49995
+branch  1 taken 6 (fallthrough)
+branch  2 taken 49989
+        6:   33:                queue_args.push(std::move(our_arg));  // Используем std::move для передачи владения
+        6:   33-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   34:            }
+    49995:   35:        }
+    49995:   35-block  0
+call    0 returned 49995
+    $$$$$:   35-block  1
+call    1 never executed
+        5:   36:        return queue_args;  // Возвращаем очередь
+        5:   36-block  0
+    =====:   37:    }
+    $$$$$:   37-block  0
+call    0 never executed
+        -:   38:
+        -:   39:}

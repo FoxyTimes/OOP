@@ -1,0 +1,42 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab3/src/types/Instruction.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\types\Instruction.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\types\Instruction.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by qawwa on 27.11.2024.
+        -:    3://
+        -:    4:
+        -:    5:#include "Instruction.h"
+        -:    6:namespace SoundProcessor {
+function _ZN14SoundProcessor11InstructionC2EbSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EE called 9 returned 100% blocks executed 100%
+        9:    7:    Instruction::Instruction(bool is_comment, std::vector<std::string> instruction)
+        9:    8:            : instruction(std::move(instruction)), is_comment(is_comment) {}
+        9:    8-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+        -:    9:
+function _ZNK14SoundProcessor11Instruction14get_is_commentEv called 9 returned 100% blocks executed 100%
+        9:   10:    bool Instruction::get_is_comment() const {
+        9:   11:        return is_comment;
+        9:   11-block  0
+        -:   12:    }
+        -:   13:
+function _ZN14SoundProcessor11Instruction15get_instructionB5cxx11Ev called 99995 returned 100% blocks executed 100%
+    99995:   14:    std::vector<std::string> &Instruction::get_instruction() {
+    99995:   15:        return instruction;
+    99995:   15-block  0
+        -:   16:    }
+        -:   17:
+function _ZN14SoundProcessor11Instruction8get_nameB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   18:    std::string Instruction::get_name() {
+    %%%%%:   18-block  0
+    #####:   19:        return "Instruction";
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   19-block  1
+    %%%%%:   19-block  2
+        -:   20:    }
+        -:   21:}

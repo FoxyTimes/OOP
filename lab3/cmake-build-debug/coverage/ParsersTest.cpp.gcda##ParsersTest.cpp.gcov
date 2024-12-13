@@ -1,0 +1,122 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab3/test/ParsersTest.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\test\CMakeFiles\lab3_tst.dir\ParsersTest.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\test\CMakeFiles\lab3_tst.dir\ParsersTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <gtest/gtest.h>
+        -:    2:#include "parsers/ConfigParser.h"
+        -:    3:#include "fileswork/FileManager.h"
+        -:    4:#include "queue"
+        -:    5:#include "memory"
+        -:    6:
+        -:    7:using namespace SoundProcessor;
+        -:    8:
+function main called 1 returned 100% blocks executed 100%
+        1:    9:int main(int argc, char **argv) {
+        1:   10:    ::testing::InitGoogleTest(&argc, argv);
+        1:   10-block  0
+call    0 returned 1
+        1:   11:    return RUN_ALL_TESTS();
+call    0 returned 1
+        -:   12:}
+        -:   13:
+        -:   14:
+        4:   15:TEST(pars, config_parser) {
+        1:   16:    FileManager fm;
+        1:   17:    fm.open_config("C:\\Users\\qawwa\\CLionProjects\\lab3\\cmake-build-debug\\src\\config.txt");
+       10:   18:    while (!fm.get_config().eof()) {
+        9:   19:        Instruction our_inst = ConfigParser::parse_string_to_inst(fm.get_config());
+        9:   20:        std::queue<std::unique_ptr<BaseArg>> result = ConfigParser::parse_instruction(our_inst);
+        9:   21:    }
+        -:   22:
+        1:   23:}
+------------------
+_ZN23pars_config_parser_TestC1Ev:
+function _ZN23pars_config_parser_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(pars, config_parser) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN23pars_config_parser_TestD0Ev:
+function _ZN23pars_config_parser_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(pars, config_parser) {
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23pars_config_parser_TestD1Ev:
+function _ZN23pars_config_parser_TestD1Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST(pars, config_parser) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN23pars_config_parser_Test8TestBodyEv:
+function _ZN23pars_config_parser_Test8TestBodyEv called 1 returned 100% blocks executed 61%
+        1:   15:TEST(pars, config_parser) {
+        1:   16:    FileManager fm;
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17:    fm.open_config("C:\\Users\\qawwa\\CLionProjects\\lab3\\cmake-build-debug\\src\\config.txt");
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17-block  2
+call    6 returned 1
+    $$$$$:   17-block  3
+call    7 never executed
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+       10:   18:    while (!fm.get_config().eof()) {
+        1:   18-block  0
+       10:   18-block  1
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   18-block  2
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   18-block  3
+branch  6 taken 9
+branch  7 taken 1 (fallthrough)
+        9:   19:        Instruction our_inst = ConfigParser::parse_string_to_inst(fm.get_config());
+        9:   19-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   19-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   20:        std::queue<std::unique_ptr<BaseArg>> result = ConfigParser::parse_instruction(our_inst);
+        9:   20-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   20-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   20-block  2
+call    6 returned 9
+    $$$$$:   20-block  3
+call    7 never executed
+    $$$$$:   20-block  4
+        9:   21:    }
+call    0 returned 9
+call    1 returned 9
+    $$$$$:   21-block  0
+call    2 never executed
+        -:   22:
+        1:   23:}
+        1:   23-block  0
+call    0 returned 1
+    $$$$$:   23-block  1
+call    1 never executed
+------------------

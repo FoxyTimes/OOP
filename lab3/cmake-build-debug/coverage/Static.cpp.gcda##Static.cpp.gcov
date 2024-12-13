@@ -1,0 +1,126 @@
+        -:    0:Source:C:/Users/qawwa/CLionProjects/lab3/src/Static.cpp
+        -:    0:Graph:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\Static.cpp.gcno
+        -:    0:Data:C:\Users\qawwa\CLionProjects\lab3\cmake-build-debug\src\CMakeFiles\lab3_lib.dir\Static.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Static.h"
+        -:    2:namespace SoundProcessor {
+        -:    3:
+        -:    4:
+function _ZN14SoundProcessor6Static8copy_strENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEii called 41 returned 100% blocks executed 90%
+       41:    5:    std::string Static::copy_str(std::string str, int from_index, int to_index) {
+       41:    6:        std::string to;
+       41:    6-block  0
+call    0 returned 41
+      357:    7:        for (int i = from_index; i != to_index; i++) {
+      316:    7-block  0
+      357:    7-block  1
+branch  0 taken 316
+branch  1 taken 41 (fallthrough)
+      316:    8:            to.push_back(str[i]);
+      316:    8-block  0
+call    0 returned 316
+branch  1 taken 316 (fallthrough)
+branch  2 taken 0 (throw)
+      316:    8-block  1
+call    3 returned 316
+branch  4 taken 316 (fallthrough)
+branch  5 taken 0 (throw)
+        -:    9:        }
+       41:   10:        return to;
+       41:   10-block  0
+       41:   10-block  1
+    =====:   11:    }
+    $$$$$:   11-block  0
+call    0 never executed
+        -:   12:
+function _ZN14SoundProcessor6Static9split_strENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_ called 9 returned 100% blocks executed 73%
+        9:   13:    std::vector<std::string> Static::split_str(std::string str, std::string delim) {
+        9:   13-block  0
+        9:   14:        std::vector<std::string> result(10000);
+        9:   14-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   14-block  1
+call    3 never executed
+        9:   15:        int index_in_result = 0, the_previous_index = 0, the_new_index = 0;
+      355:   16:        for (int i = 0; i != str.length(); i++, the_new_index = i) {
+        9:   16-block  0
+      346:   16-block  1
+      355:   16-block  2
+call    0 returned 355
+branch  1 taken 346
+branch  2 taken 9 (fallthrough)
+      661:   17:            for (int j = 0; j != delim.length(); j++) {
+      346:   17-block  0
+      315:   17-block  1
+      661:   17-block  2
+call    0 returned 661
+branch  1 taken 346
+branch  2 taken 315 (fallthrough)
+      346:   18:                if (str[i] == delim[j]) {
+      346:   18-block  0
+call    0 returned 346
+branch  1 taken 346 (fallthrough)
+branch  2 taken 0 (throw)
+      346:   18-block  1
+call    3 returned 346
+branch  4 taken 346 (fallthrough)
+branch  5 taken 0 (throw)
+      346:   18-block  2
+branch  6 taken 31 (fallthrough)
+branch  7 taken 315
+       31:   19:                    result[index_in_result] = copy_str(str, the_previous_index, i);
+       31:   19-block  0
+call    0 returned 31
+branch  1 taken 31 (fallthrough)
+branch  2 taken 0 (throw)
+       31:   19-block  1
+call    3 returned 31
+branch  4 taken 31 (fallthrough)
+branch  5 taken 0 (throw)
+       31:   19-block  2
+call    6 returned 31
+call    7 returned 31
+call    8 returned 31
+call    9 returned 31
+    $$$$$:   19-block  3
+call   10 never executed
+    $$$$$:   19-block  4
+    $$$$$:   19-block  5
+       31:   20:                    if (the_previous_index != i) {
+branch  0 taken 31 (fallthrough)
+branch  1 taken 0
+       31:   21:                        index_in_result++;
+       31:   21-block  0
+        -:   22:                    }
+       31:   23:                    the_previous_index = i + 1;
+       31:   24:                    break;
+       31:   24-block  0
+        -:   25:                }
+        -:   26:            }
+        -:   27:        }
+        9:   28:        result[index_in_result] = copy_str(str, the_previous_index, the_new_index);
+        9:   28-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   28-block  1
+call    3 returned 9
+branch  4 taken 9 (fallthrough)
+branch  5 taken 0 (throw)
+        9:   28-block  2
+call    6 returned 9
+call    7 returned 9
+call    8 returned 9
+call    9 returned 9
+    $$$$$:   28-block  3
+call   10 never executed
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+        9:   29:        return result;
+        9:   29-block  0
+    =====:   30:    }
+    $$$$$:   30-block  0
+call    0 never executed
+        -:   31:}
